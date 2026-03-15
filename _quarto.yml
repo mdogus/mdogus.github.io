@@ -16,8 +16,8 @@ website:
   navbar:
     pinned: true
     collapse-below: lg
-    background: "#f8f3ec"
-    foreground: "#24313d"
+    background: "#101922"
+    foreground: "#e8efec"
     right:
       - href: index.qmd
         text: Ana Sayfa
