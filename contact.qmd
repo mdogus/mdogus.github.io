@@ -38,58 +38,60 @@ Sunucu tarafı form kurmadan, daha düşük bakım gerektiren ve spam yüzeyini 
 :::
 :::
 
-<section class="contact-shell" aria-labelledby="contact-title">
-  <div class="section-heading">
-    <p class="section-kicker">İletişim Kanalları</p>
-    <h2 id="contact-title">Doğrudan Bağlantılar</h2>
-    <p class="section-lede">
-      E-posta, ORCID, Google Scholar, ResearchGate ve GitHub gibi temel profiller bir bakışta erişilebilir durumdadır.
-    </p>
-  </div>
+::: {.contact-shell}
+::: {.section-heading}
+<p class="section-kicker">İletişim Kanalları</p>
 
-  <ul class="contact-list">
-    <li class="content-card">
-      <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-envelope"></i></div>
-      <h3>E-posta</h3>
-      <p>Kurumsal yazışmalar ve akademik iletişim için birincil kanal.</p>
-      <p>
-        <a class="contact-link icon-link" href="mailto:ad.soyad@kurum.edu.tr"><span>Kurumsal e-posta adresine yazın</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      </p>
-    </li>
-    <li class="content-card">
-      <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-patch-check"></i></div>
-      <h3>ORCID</h3>
-      <p>Yayın kimliğinizi ve araştırmacı kaydınızı standart biçimde sunun.</p>
-      <p>
-        <a class="contact-link icon-link" href="https://orcid.org/0000-0000-0000-0000"><span>ORCID profilini görüntüleyin</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      </p>
-    </li>
-    <li class="content-card">
-      <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-mortarboard"></i></div>
-      <h3>Google Scholar</h3>
-      <p>Atıf görünürlüğü ve yayın taraması için en pratik akademik dizinlerden biri.</p>
-      <p>
-        <a class="contact-link icon-link" href="https://scholar.google.com/"><span>Google Scholar kaydını açın</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      </p>
-    </li>
-    <li class="content-card">
-      <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-people"></i></div>
-      <h3>ResearchGate</h3>
-      <p>Ağ temelli görünürlük veya paylaşılabilir yayın profili için ek kanal.</p>
-      <p>
-        <a class="contact-link icon-link" href="https://www.researchgate.net/"><span>ResearchGate profilini görüntüleyin</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      </p>
-    </li>
-    <li class="content-card">
-      <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-github"></i></div>
-      <h3>GitHub</h3>
-      <p>Kod, veri, statik site altyapısı ve açık araştırma çıktıları için uygun alan.</p>
-      <p>
-        <a class="contact-link icon-link" href="https://github.com/mdogus"><span>GitHub profilini açın</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      </p>
-    </li>
-  </ul>
-</section>
+## Doğrudan Bağlantılar {#contact-title}
+
+<p class="section-lede">
+  E-posta, ORCID, Google Scholar, ResearchGate ve GitHub gibi temel profiller bir bakışta erişilebilir durumdadır.
+</p>
+:::
+
+<ul class="contact-list">
+  <li class="content-card">
+    <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-envelope"></i></div>
+    <h3>E-posta</h3>
+    <p>Kurumsal yazışmalar ve akademik iletişim için birincil kanal.</p>
+    <p>
+      <a class="contact-link icon-link" href="mailto:ad.soyad@kurum.edu.tr"><span>Kurumsal e-posta adresine yazın</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+    </p>
+  </li>
+  <li class="content-card">
+    <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-patch-check"></i></div>
+    <h3>ORCID</h3>
+    <p>Yayın kimliğinizi ve araştırmacı kaydınızı standart biçimde sunun.</p>
+    <p>
+      <a class="contact-link icon-link" href="https://orcid.org/0000-0000-0000-0000"><span>ORCID profilini görüntüleyin</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+    </p>
+  </li>
+  <li class="content-card">
+    <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-mortarboard"></i></div>
+    <h3>Google Scholar</h3>
+    <p>Atıf görünürlüğü ve yayın taraması için en pratik akademik dizinlerden biri.</p>
+    <p>
+      <a class="contact-link icon-link" href="https://scholar.google.com/"><span>Google Scholar kaydını açın</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+    </p>
+  </li>
+  <li class="content-card">
+    <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-people"></i></div>
+    <h3>ResearchGate</h3>
+    <p>Ağ temelli görünürlük veya paylaşılabilir yayın profili için ek kanal.</p>
+    <p>
+      <a class="contact-link icon-link" href="https://www.researchgate.net/"><span>ResearchGate profilini görüntüleyin</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+    </p>
+  </li>
+  <li class="content-card">
+    <div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-github"></i></div>
+    <h3>GitHub</h3>
+    <p>Kod, veri, statik site altyapısı ve açık araştırma çıktıları için uygun alan.</p>
+    <p>
+      <a class="contact-link icon-link" href="https://github.com/mdogus"><span>GitHub profilini açın</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+    </p>
+  </li>
+</ul>
+:::
 
 ::: {.section-card}
 ## Ek Akademik Profiller

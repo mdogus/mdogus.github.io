@@ -81,24 +81,27 @@ için daha uzun bir biyografi gerektiğinde bu sayfa rahatlıkla genişletilebil
 ::: {.section-card .bio-side}
 ## Kısa Bilgiler {#bio-summary-title}
 
-<dl class="bio-details">
-  <div>
-    <dt>Kurum</dt>
-    <dd>Üniversite / araştırma kurumu</dd>
-  </div>
-  <div>
-    <dt>Bölüm</dt>
-    <dd>Bölüm veya araştırma birimi</dd>
-  </div>
-  <div>
-    <dt>Uzmanlık</dt>
-    <dd>Akademik alan, alt alan veya tematik uzmanlık</dd>
-  </div>
-  <div>
-    <dt>Diller</dt>
-    <dd>Türkçe, İngilizce, diğerleri</dd>
-  </div>
-</dl>
+::: {.bio-details}
+::: {}
+**Kurum**  
+Üniversite / araştırma kurumu
+:::
+
+::: {}
+**Bölüm**  
+Bölüm veya araştırma birimi
+:::
+
+::: {}
+**Uzmanlık**  
+Akademik alan, alt alan veya tematik uzmanlık
+:::
+
+::: {}
+**Diller**  
+Türkçe, İngilizce, diğerleri
+:::
+:::
 
 <p class="page-note">
   CV PDF alanı hazırdır. Dosyanızı <code>assets/files/cv.pdf</code> yoluna ekleyip
