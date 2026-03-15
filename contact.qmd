@@ -1,59 +1,102 @@
 ---
 title: "İletişim"
 description: "E-posta ve akademik profiller için erişilebilir iletişim sayfası."
+title-block: false
+page-layout: full
 ---
 
+::: {.page-hero}
+::: {.page-hero__content}
+<p class="page-hero__eyebrow">İletişim</p>
+
+# İletişim ve Akademik Profiller
+
+<p class="page-hero__meta">Kurumsal e-posta, araştırma profilleri ve güvenli statik iletişim yaklaşımı</p>
+<p class="page-hero__lede">
+  Bu site, backend gerektiren bir iletişim formu yerine güvenli ve düşük bakım maliyetli
+  statik iletişim yaklaşımını benimser. Tercih edilen yöntem; kurumsal e-posta ve
+  akademik profil bağlantılarını tek bir profesyonel sayfada toplamaktır.
+</p>
+:::
+:::
+
+::: {.highlight-grid}
+::: {.highlight-card}
+### Tercih Edilen İletişim
+
+Kurumsal e-posta üzerinden doğrudan iletişim, özellikle akademik iş birlikleri, konuşma davetleri ve yayın odaklı yazışmalar için en güvenilir kanaldır.
+:::
+
+::: {.highlight-card}
+### Statik ve Güvenli
+
+Sunucu tarafı form kurmadan, daha düşük bakım gerektiren ve spam yüzeyini büyütmeyen sade bir iletişim yapısı korunur.
+:::
+:::
+
 <section class="contact-shell" aria-labelledby="contact-title">
-  <h2 id="contact-title">İletişim Kanalları</h2>
-  <p>
-    Bu site, backend gerektiren bir iletişim formu yerine güvenli ve düşük bakım maliyetli
-    statik iletişim yaklaşımını benimser. Tercih edilen yöntem kurumsal e-posta ve akademik profil bağlantılarıdır.
-  </p>
+  <div class="section-heading">
+    <p class="section-kicker">İletişim Kanalları</p>
+    <h2 id="contact-title">Doğrudan Bağlantılar</h2>
+    <p class="section-lede">
+      E-posta, ORCID, Google Scholar, ResearchGate ve GitHub gibi temel profiller bir bakışta erişilebilir durumdadır.
+    </p>
+  </div>
 
   <ul class="contact-list">
     <li class="content-card">
       <h3>E-posta</h3>
+      <p>Kurumsal yazışmalar ve akademik iletişim için birincil kanal.</p>
       <p>
-        <a href="mailto:ad.soyad@kurum.edu.tr">Kurumsal e-posta adresine yazın</a>
+        <a class="contact-link" href="mailto:ad.soyad@kurum.edu.tr">Kurumsal e-posta adresine yazın</a>
       </p>
     </li>
     <li class="content-card">
       <h3>ORCID</h3>
+      <p>Yayın kimliğinizi ve araştırmacı kaydınızı standart biçimde sunun.</p>
       <p>
-        <a href="https://orcid.org/0000-0000-0000-0000">ORCID profilini görüntüleyin</a>
+        <a class="contact-link" href="https://orcid.org/0000-0000-0000-0000">ORCID profilini görüntüleyin</a>
       </p>
     </li>
     <li class="content-card">
       <h3>Google Scholar</h3>
+      <p>Atıf görünürlüğü ve yayın taraması için en pratik akademik dizinlerden biri.</p>
       <p>
-        <a href="https://scholar.google.com/">Google Scholar kaydını açın</a>
+        <a class="contact-link" href="https://scholar.google.com/">Google Scholar kaydını açın</a>
       </p>
     </li>
     <li class="content-card">
       <h3>ResearchGate</h3>
+      <p>Ağ temelli görünürlük veya paylaşılabilir yayın profili için ek kanal.</p>
       <p>
-        <a href="https://www.researchgate.net/">ResearchGate profilini görüntüleyin</a>
+        <a class="contact-link" href="https://www.researchgate.net/">ResearchGate profilini görüntüleyin</a>
       </p>
     </li>
     <li class="content-card">
       <h3>GitHub</h3>
+      <p>Kod, veri, statik site altyapısı ve açık araştırma çıktıları için uygun alan.</p>
       <p>
-        <a href="https://github.com/mdogus">GitHub profilini açın</a>
+        <a class="contact-link" href="https://github.com/mdogus">GitHub profilini açın</a>
       </p>
     </li>
   </ul>
 </section>
 
+::: {.section-card}
 ## Ek Akademik Profiller
 
-İhtiyaca göre aşağıdaki bağlantılar da aynı düzende eklenebilir:
+İhtiyaca göre aşağıdaki bağlantılar da aynı düzen içinde eklenebilir:
 
 - Academia.edu
 - LinkedIn
 - SSRN
 - Kurumsal personel sayfası
+:::
 
+::: {.section-card}
 ## İletişim Notu
 
-Eğer e-posta adresinizi açık biçimde paylaşmak istemezseniz, iletişim sayfasında yalnızca kurumsal profil
-bağlantılarını tutabilir veya adresi görsel olmayan basit bir obfuscation yaklaşımıyla koruyabilirsiniz.
+Eğer e-posta adresinizi açık biçimde paylaşmak istemezseniz, iletişim sayfasında yalnızca
+kurumsal profil bağlantılarını tutabilir veya adresi görsel olmayan basit bir obfuscation
+yaklaşımıyla koruyabilirsiniz.
+:::

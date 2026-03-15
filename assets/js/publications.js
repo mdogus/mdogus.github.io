@@ -71,7 +71,10 @@ function initFeaturedPublications(publications) {
     return;
   }
 
-  container.replaceChildren(buildPublicationList(featuredItems, false));
+  container.replaceChildren(buildPublicationList(featuredItems, {
+    includeTypeBadge: false,
+    variant: "featured",
+  }));
 }
 
 function initPublicationDirectory(publications) {
@@ -153,21 +156,25 @@ function renderGroupedPublications(container, publications, selectedCategory) {
       section.append(yearHeading);
 
       const yearItems = items.filter((item) => item.year === year);
-      section.append(buildPublicationList(yearItems, true));
+      section.append(buildPublicationList(yearItems, {
+        includeTypeBadge: true,
+        variant: "directory",
+      }));
     });
 
     container.append(section);
   });
 }
 
-function buildPublicationList(publications, includeTypeBadge) {
+function buildPublicationList(publications, options = {}) {
+  const { includeTypeBadge = false, variant = "directory" } = options;
   const list = document.createElement("ol");
-  list.className = "publication-list";
+  list.className = `publication-list publication-list-${variant}`;
 
   publications.forEach((item) => {
     const listItem = document.createElement("li");
     const article = document.createElement("article");
-    article.className = "publication-entry";
+    article.className = `publication-entry publication-entry-${variant}`;
 
     const meta = document.createElement("p");
     meta.className = "publication-meta";

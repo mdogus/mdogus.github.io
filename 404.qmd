@@ -2,17 +2,23 @@
 title: "Sayfa Bulunamadı"
 description: "İstenen içerik bulunamadığında gösterilen yardımcı sayfa."
 title-block: false
+page-layout: full
 ---
 
-<section class="hero-panel" aria-labelledby="not-found-title">
-  <p class="hero-eyebrow">404</p>
-  <h1 id="not-found-title">Aradığınız sayfa bulunamadı</h1>
-  <p class="hero-lede">
-    Bağlantı taşınmış, silinmiş veya adres hatalı yazılmış olabilir.
-    Ana sayfaya dönerek gezinmeye devam edebilirsiniz.
-  </p>
-  <div class="hero-actions">
-    <a class="button-link" href="index.html">Ana Sayfaya Dön</a>
-    <a class="button-link button-link-secondary" href="publications.html">Yayınları Aç</a>
-  </div>
-</section>
+::: {.page-hero}
+::: {.page-hero__content}
+<p class="page-hero__eyebrow">404</p>
+
+# Aradığınız sayfa bulunamadı {#not-found-title}
+
+<p class="page-hero__lede">
+  Bağlantı taşınmış, silinmiş veya adres hatalı yazılmış olabilir.
+  Ana sayfaya dönerek gezinmeye devam edebilirsiniz.
+</p>
+
+::: {.hero-actions}
+[Ana Sayfaya Dön](index.html){.button-link}
+[Yayınları Aç](publications.html){.button-link .button-link-secondary}
+:::
+:::
+:::

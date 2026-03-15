@@ -5,69 +5,184 @@ title-block: false
 page-layout: full
 ---
 
-<section class="hero-panel" aria-labelledby="home-title">
-  <p class="hero-eyebrow">Akademik Kişisel Web Sitesi</p>
-  <h1 id="home-title">Ad Soyad</h1>
-  <p class="hero-subtitle">Akademik unvan | Bölüm / Kurum</p>
-  <p class="hero-lede">
-    Araştırma, yayın ve akademik duyurularımı sade, hızlı ve düşük bakım maliyetli
-    bir yapı içinde paylaşmak için tasarlanmış kişisel web siteme hoş geldiniz.
-    Bu metni kendi uzmanlık alanınıza ve güncel akademik pozisyonunuza göre düzenleyebilirsiniz.
-  </p>
-  <div class="hero-actions">
-    <a class="button-link" href="publications.html">Yayınlara Git</a>
-    <a class="button-link button-link-secondary" href="contact.html">İletişim Bilgileri</a>
-  </div>
-</section>
+::: {.hero-shell}
+::: {.hero-grid}
+::: {.hero-copy}
+<p class="eyebrow">Akademik Kişisel Web Sitesi</p>
+
+# Ad Soyad {#home-title}
+
+<p class="hero-role">Akademik unvan | Bölüm / Kurum</p>
+<p class="hero-lede">
+  Araştırmalarımı, yayınlarımı ve akademik duyurularımı çağdaş ama uzun ömürlü
+  bir yapı içinde paylaşmak için tasarlanmış bu kişisel sitede; temel uzmanlık
+  alanlarımı, seçili çalışmalarımı ve iletişim kanallarımı düzenli biçimde sunuyorum.
+</p>
+
+<ul class="hero-tags">
+  <li>Araştırma alanı 1</li>
+  <li>Araştırma alanı 2</li>
+  <li>Disiplinlerarası iş birliği</li>
+</ul>
+
+::: {.hero-actions}
+[Yayınları Gör](publications.html){.button-link}
+[İletişim ve Profiller](contact.html){.button-link .button-link-secondary}
+:::
+:::
+
+::: {.hero-aside}
+::: {.hero-note-card}
+### Akademik Odak
+
+Bu alanı güncel araştırma temanız, devam eden projeniz veya bir kitap / makale
+hazırlığınız için kısa bir editoryal not gibi kullanabilirsiniz.
+:::
+
+::: {.metric-grid}
+::: {.metric-card}
+### Araştırma
+
+Açık bilim, bilgi mimarisi, dijital akademik sunum
+:::
+
+::: {.metric-card}
+### Yayın
+
+Makaleler, bildiriler, kitaplar ve tezler için genişleyebilir katalog
+:::
+
+::: {.metric-card}
+### Öğretim
+
+İleride dersler, projeler ve kısa yazılar için hazır altyapı
+:::
+:::
+:::
+:::
+:::
+
+::: {.section-stack}
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Araştırma Odağı</p>
 
 ## Araştırma Alanları
 
-<div class="topic-grid">
-  <article class="topic-card">
-    <h3>Alan 1</h3>
-    <p>Örneğin dijital beşeri bilimler, eğitim teknolojileri, dil çalışmaları veya sosyal teori.</p>
-  </article>
-  <article class="topic-card">
-    <h3>Alan 2</h3>
-    <p>Yöntem, tema veya alt uzmanlık başlığınızı kısa ve anlaşılır biçimde özetleyin.</p>
-  </article>
-  <article class="topic-card">
-    <h3>Alan 3</h3>
-    <p>Disiplinlerarası çalışma alanlarınızı ve iş birliği potansiyelinizi belirtin.</p>
-  </article>
-</div>
+<p class="section-lede">
+  Çalışma başlıklarını ayrı kartlar olarak sunmak, hem uzmanlık alanlarınızı daha
+  hızlı anlatır hem de akademik profilinizi ilk bakışta daha güçlü hale getirir.
+</p>
+:::
 
-## Hızlı Erişim
+::: {.topic-grid}
+::: {.topic-card}
+### Alan 1
 
-<div class="quick-links">
-  <a class="button-link button-link-secondary" href="bio.html">Biyografiyi Oku</a>
-  <a class="button-link button-link-secondary" href="publications.html">Tüm Yayınları Gör</a>
-  <a class="button-link button-link-secondary" href="contact.html">Akademik Profiller</a>
-</div>
+Örneğin dijital beşeri bilimler, eğitim teknolojileri, dil çalışmaları veya sosyal teori.
+:::
+
+::: {.topic-card}
+### Alan 2
+
+Yöntem, tema veya alt uzmanlık başlığınızı kısa ve profesyonel bir çerçevede özetleyin.
+:::
+
+::: {.topic-card}
+### Alan 3
+
+Disiplinlerarası çalışma alanlarınızı ve birlikte üretim potansiyelinizi görünür kılın.
+:::
+:::
+:::
+
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Hızlı Erişim</p>
+
+## Akademik İçerik Alanları
+
+<p class="section-lede">
+  Ana sayfa yalnızca bağlantı listesi gibi değil, ziyaretçiyi doğru içeriğe yönlendiren
+  profesyonel bir karşılama paneli gibi davranmalı.
+</p>
+:::
+
+::: {.action-grid}
+::: {.action-tile}
+### Biyografi
+
+Akademik geçmişinizi, kurum bilginizi ve araştırma ilgi alanlarınızı derli toplu bir yapı içinde sunun.
+
+[Bio sayfasını aç](bio.html){.action-tile__link}
+:::
+
+::: {.action-tile}
+### Yayın Kataloğu
+
+Makaleler, kitaplar, bildiriler ve tezler veri odaklı olarak yönetilir; yeni kayıt eklemek için HTML düzenlemeniz gerekmez.
+
+[Yayınlara git](publications.html){.action-tile__link}
+:::
+
+::: {.action-tile}
+### İletişim ve Profiller
+
+Kurumsal e-posta, ORCID, Scholar ve diğer akademik profilleri tek bir güvenilir iletişim katmanında toplayın.
+
+[İletişim bilgilerini aç](contact.html){.action-tile__link}
+:::
+:::
+:::
+
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Seçili Çalışmalar</p>
 
 ## Öne Çıkan Yayınlar
 
-Bu bölüm `data/publications.json` dosyasındaki `featured: true` alanına göre otomatik üretilir.
-Yeni bir öne çıkan yayın eklemek için yalnızca veri dosyasını güncellemeniz yeterlidir.
+<p class="section-lede">
+  Bu bölüm `data/publications.json` dosyasındaki `featured: true` alanına göre otomatik üretilir.
+  Böylece ana sayfanız, editoryal olarak seçilmiş bir yayın vitrini gibi davranır.
+</p>
+:::
 
 <div id="featured-publications" aria-live="polite"></div>
+:::
+
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Güncel Görünüm</p>
 
 ## Güncel Çalışmalar ve Duyurular
 
-<div class="info-grid">
-  <article class="content-card">
-    <h3>Devam Eden Araştırmalar</h3>
-    <p>Yürüttüğünüz proje, saha çalışması veya kitap hazırlığı gibi güncel faaliyetleri burada özetleyin.</p>
-  </article>
-  <article class="content-card">
-    <h3>Yaklaşan Sunumlar</h3>
-    <p>Konuşma, panel, seminer veya konferans bildirimleri için kısa duyuru alanı hazırdır.</p>
-  </article>
-  <article class="content-card">
-    <h3>İçerik Genişleme Alanı</h3>
-    <p>Projeler, öğretim, kısa yazılar veya seçili kaynak listeleri için bu yapıyı ileride kolayca genişletebilirsiniz.</p>
-  </article>
-</div>
+<p class="section-lede">
+  Bu alanı yakında yayımlanacak yazılar, yaklaşan konuşmalar veya devam eden proje
+  notları için kullanabilirsiniz.
+</p>
+:::
+
+::: {.info-grid}
+::: {.info-card}
+### Devam Eden Araştırmalar
+
+Yürüttüğünüz proje, saha çalışması veya kitap hazırlığı gibi güncel faaliyetleri burada özetleyin.
+:::
+
+::: {.info-card}
+### Yaklaşan Sunumlar
+
+Konuşma, panel, seminer veya konferans bildirimleri için kısa ama görünür bir duyuru alanı.
+:::
+
+::: {.info-card}
+### İçerik Genişleme Alanı
+
+Projeler, öğretim, kısa yazılar veya seçili kaynak listeleri için hazır bir genişleme noktası.
+:::
+:::
+:::
+:::
 
 <script id="publications-data" type="application/json">
 {{< include data/publications.json >}}

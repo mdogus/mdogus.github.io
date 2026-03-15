@@ -33,7 +33,7 @@ Amac; biyografi, yayinlar ve iletisim bilgilerini temiz bir bilgi mimarisi icind
 |-- contact.qmd
 |-- index.qmd
 |-- publications.qmd
-|-- styles.css
+|-- styles.scss
 `-- README.md
 ```
 
@@ -88,7 +88,7 @@ description: "Dersler ve ogrenci calismalari."
 ```
 
 3. Sayfayi `_quarto.yml` icindeki `website.navbar.left` listesine ekleyin.
-4. Gerekirse `styles.css` icinde sayfaya ozel siniflar ekleyin.
+4. Gerekirse `styles.scss` icinde sayfaya ozel siniflar ekleyin.
 
 ## Yerelde nasil onizlenir
 
