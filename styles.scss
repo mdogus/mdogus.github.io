@@ -1,5 +1,5 @@
 /*-- scss:defaults --*/
-$font-family-sans-serif: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $headings-font-family: "Plus Jakarta Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $body-bg: #0d151d;
 $body-color: #e6ece9;
@@ -71,6 +71,7 @@ body {
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
   color-scheme: dark;
+  font-family: $font-family-sans-serif;
 }
 
 body.nav-fixed {
@@ -134,6 +135,7 @@ li,
 dd,
 dt {
   max-width: 72ch;
+  font-family: $font-family-sans-serif;
 }
 
 h1,
@@ -144,6 +146,57 @@ h5 {
   color: var(--text-1);
   letter-spacing: -0.035em;
   font-weight: 700;
+  font-family: $headings-font-family;
+}
+
+main,
+section,
+article,
+aside,
+nav,
+footer,
+div,
+span,
+a,
+small,
+strong,
+em,
+label,
+input,
+select,
+textarea,
+button,
+.menu-text,
+.navbar,
+.navbar *:not(i):not(svg):not(path),
+.publication-meta,
+.publication-summary,
+.page-note,
+.site-footer,
+.site-footer *:not(i):not(svg):not(path) {
+  font-family: $font-family-sans-serif;
+}
+
+.navbar-brand,
+.navbar-title,
+.hero-shell h1,
+.page-hero h1,
+.hero-note-card h2,
+.hero-note-card h3,
+.metric-card h3,
+.highlight-card h3,
+.topic-card h3,
+.action-tile h3,
+.info-card h3,
+.publication-entry h3,
+.publication-entry h4,
+.contact-list h3,
+.bio-section-card h2,
+.bio-section-card h3,
+.section-card h2,
+.section-heading h2,
+.site-footer h2 {
+  font-family: $headings-font-family;
 }
 
 h1,
