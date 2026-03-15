@@ -242,26 +242,36 @@ function buildLinks(item) {
   container.className = "publication-links";
 
   if (item.doi) {
-    container.append(createLink(`https://doi.org/${item.doi}`, "DOI kaydını aç"));
+    container.append(createLink(`https://doi.org/${item.doi}`, "DOI kaydını aç", "link-45deg"));
   }
 
   if (item.url) {
-    container.append(createLink(item.url, "Yayın sayfasını aç"));
+    container.append(createLink(item.url, "Yayın sayfasını aç", "box-arrow-up-right"));
   }
 
   if (item.pdf) {
-    container.append(createLink(item.pdf, "PDF dosyasını aç"));
+    container.append(createLink(item.pdf, "PDF dosyasını aç", "file-earmark-pdf"));
   }
 
   return container;
 }
 
-function createLink(href, text) {
+function createLink(href, text, iconName) {
   const link = document.createElement("a");
   link.href = href;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  link.textContent = text;
+
+  if (iconName) {
+    const icon = document.createElement("i");
+    icon.className = `bi bi-${iconName}`;
+    icon.setAttribute("aria-hidden", "true");
+    link.append(icon);
+  }
+
+  const textNode = document.createElement("span");
+  textNode.textContent = text;
+  link.append(textNode);
   return link;
 }
 
