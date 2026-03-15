@@ -381,15 +381,12 @@ dt {
 .contact-list {
   display: grid;
   gap: 1rem;
+  padding: 0;
+  list-style: none;
 }
 
-.contact-list dt {
-  margin-bottom: 0.35rem;
-  font-weight: 700;
-}
-
-.contact-list dd {
-  margin-left: 0;
+.contact-list p {
+  margin-bottom: 0;
 }
 
 .list-clean {

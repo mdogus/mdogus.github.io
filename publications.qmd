@@ -7,36 +7,36 @@ Bu sayfa `data/publications.json` dosyasından üretilir. Yeni bir yayın ekleme
 yalnızca veri kaydını eklemeniz ve gerekirse bağlantı alanlarını güncellemeniz yeterlidir.
 
 <section class="publication-shell" aria-labelledby="publication-directory-title">
-  <h2 id="publication-directory-title">Yayın Dizini</h2>
-  <p class="publication-summary">
-    Kayıtlar kategoriye göre ayrılır, yıl bazında ters kronolojik sıralanır ve ileride
-    “selected publications” ile “all publications” ayrımı yapmaya hazırdır.
-  </p>
+<h2 id="publication-directory-title">Yayın Dizini</h2>
+<p class="publication-summary">
+  Kayıtlar kategoriye göre ayrılır, yıl bazında ters kronolojik sıralanır ve ileride
+  “selected publications” ile “all publications” ayrımı yapmaya hazırdır.
+</p>
 
-  <div class="publication-toolbar">
-    <form class="publication-filters" aria-label="Yayın filtreleri">
-      <div class="field-group">
-        <label for="category-filter">Kategori</label>
-        <select id="category-filter" name="category">
-          <option value="all">Tüm kategoriler</option>
-          <option value="article">Makaleler</option>
-          <option value="book">Kitaplar</option>
-          <option value="conference">Bildiriler</option>
-          <option value="thesis">Tezler</option>
-        </select>
-      </div>
-      <div class="field-group">
-        <label for="year-filter">Yıl</label>
-        <select id="year-filter" name="year">
-          <option value="all">Tüm yıllar</option>
-        </select>
-      </div>
-    </form>
+<div class="publication-toolbar">
+<form class="publication-filters" aria-label="Yayın filtreleri">
+<div class="field-group">
+<label for="category-filter">Kategori</label>
+<select id="category-filter" name="category">
+<option value="all">Tüm kategoriler</option>
+<option value="article">Makaleler</option>
+<option value="book">Kitaplar</option>
+<option value="conference">Bildiriler</option>
+<option value="thesis">Tezler</option>
+</select>
+</div>
+<div class="field-group">
+<label for="year-filter">Yıl</label>
+<select id="year-filter" name="year">
+<option value="all">Tüm yıllar</option>
+</select>
+</div>
+</form>
 
-    <p id="publication-feedback" class="publication-summary" aria-live="polite"></p>
-  </div>
+<p id="publication-feedback" class="publication-summary" aria-live="polite"></p>
+</div>
 
-  <div id="publications-directory"></div>
+<div id="publications-directory"></div>
 </section>
 
 ## Veri Şeması

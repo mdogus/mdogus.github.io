@@ -10,38 +10,38 @@ description: "E-posta ve akademik profiller için erişilebilir iletişim sayfas
     statik iletişim yaklaşımını benimser. Tercih edilen yöntem kurumsal e-posta ve akademik profil bağlantılarıdır.
   </p>
 
-  <dl class="contact-list">
-    <div class="content-card">
-      <dt>E-posta</dt>
-      <dd>
+  <ul class="contact-list">
+    <li class="content-card">
+      <h3>E-posta</h3>
+      <p>
         <a href="mailto:ad.soyad@kurum.edu.tr">Kurumsal e-posta adresine yazın</a>
-      </dd>
-    </div>
-    <div class="content-card">
-      <dt>ORCID</dt>
-      <dd>
+      </p>
+    </li>
+    <li class="content-card">
+      <h3>ORCID</h3>
+      <p>
         <a href="https://orcid.org/0000-0000-0000-0000">ORCID profilini görüntüleyin</a>
-      </dd>
-    </div>
-    <div class="content-card">
-      <dt>Google Scholar</dt>
-      <dd>
+      </p>
+    </li>
+    <li class="content-card">
+      <h3>Google Scholar</h3>
+      <p>
         <a href="https://scholar.google.com/">Google Scholar kaydını açın</a>
-      </dd>
-    </div>
-    <div class="content-card">
-      <dt>ResearchGate</dt>
-      <dd>
+      </p>
+    </li>
+    <li class="content-card">
+      <h3>ResearchGate</h3>
+      <p>
         <a href="https://www.researchgate.net/">ResearchGate profilini görüntüleyin</a>
-      </dd>
-    </div>
-    <div class="content-card">
-      <dt>GitHub</dt>
-      <dd>
+      </p>
+    </li>
+    <li class="content-card">
+      <h3>GitHub</h3>
+      <p>
         <a href="https://github.com/mdogus">GitHub profilini açın</a>
-      </dd>
-    </div>
-  </dl>
+      </p>
+    </li>
+  </ul>
 </section>
 
 ## Ek Akademik Profiller
