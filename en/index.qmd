@@ -1,0 +1,231 @@
+---
+title: "Home"
+description: "Landing page for the academic personal website."
+lang: en
+page-layout: full
+format:
+  html:
+    title-block: false
+---
+
+::: {.hero-shell}
+::: {.hero-grid}
+::: {.hero-copy}
+<p class="eyebrow">Academic Personal Website</p>
+
+# Ad Soyad {#home-title}
+
+<p class="hero-role">Academic title | Department / Institution</p>
+<p class="hero-lede">
+  This site is designed as a durable and accessible academic home for sharing
+  research, publications, and scholarly updates. It presents core research
+  areas, selected outputs, and contact channels in a clean and professional structure.
+</p>
+
+<ul class="hero-tags">
+  <li>Research area 1</li>
+  <li>Research area 2</li>
+  <li>Interdisciplinary collaboration</li>
+</ul>
+
+::: {.hero-actions}
+[<i class="bi bi-journal-text" aria-hidden="true"></i><span>View Publications</span>](publications.html){.button-link .button-link-icon}
+[<i class="bi bi-people" aria-hidden="true"></i><span>Contact and Profiles</span>](contact.html){.button-link .button-link-secondary .button-link-icon}
+:::
+:::
+
+::: {.hero-aside}
+::: {.hero-note-card}
+<div class="card-icon" aria-hidden="true"><i class="bi bi-stars"></i></div>
+
+<p class="card-title">Current Academic Focus</p>
+
+Use this area as an editorial note for an ongoing project, a research theme,
+or a book or article currently in progress.
+:::
+
+::: {.metric-grid}
+::: {.metric-card}
+<div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-binoculars"></i></div>
+
+<p class="card-title">Research</p>
+
+Open science, information architecture, digital scholarly communication
+:::
+
+::: {.metric-card}
+<div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-collection"></i></div>
+
+<p class="card-title">Publications</p>
+
+Expandable catalogue for articles, conference papers, books, and theses
+:::
+
+::: {.metric-card}
+<div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-easel2"></i></div>
+
+<p class="card-title">Teaching</p>
+
+Ready for future pages on courses, projects, and short academic notes
+:::
+:::
+:::
+:::
+:::
+
+::: {.section-stack}
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Research Profile</p>
+
+## Research Areas
+
+<p class="section-lede">
+  Presenting your core themes as distinct cards helps visitors understand
+  expertise quickly and gives the site a stronger scholarly presence.
+</p>
+:::
+
+::: {.topic-grid}
+::: {.topic-card}
+<div class="card-icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></div>
+
+### Area 1
+
+For example: digital humanities, educational technology, language studies, or social theory.
+:::
+
+::: {.topic-card}
+<div class="card-icon" aria-hidden="true"><i class="bi bi-braces-asterisk"></i></div>
+
+### Area 2
+
+Summarize a method, theme, or subfield in a concise and professional way.
+:::
+
+::: {.topic-card}
+<div class="card-icon" aria-hidden="true"><i class="bi bi-intersect"></i></div>
+
+### Area 3
+
+Highlight interdisciplinary work and areas where collaboration can emerge.
+:::
+:::
+:::
+
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Quick Access</p>
+
+## Academic Content Areas
+
+<p class="section-lede">
+  The home page should act not just as a list of links, but as a professional
+  welcome panel that directs visitors to the right content quickly.
+</p>
+:::
+
+::: {.action-grid}
+::: {.action-tile}
+<div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-person-vcard"></i></div>
+
+### Biography
+
+Present your academic background, institutional affiliation, and research interests in a structured format.
+
+[<span>Open bio page</span><i class="bi bi-arrow-right-short" aria-hidden="true"></i>](bio.html){.action-tile__link .icon-link}
+:::
+
+::: {.action-tile}
+<div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-stack"></i></div>
+
+### Publication Catalogue
+
+Articles, books, conference papers, and theses are managed as data rather than hard-coded HTML.
+
+[<span>Go to publications</span><i class="bi bi-arrow-right-short" aria-hidden="true"></i>](publications.html){.action-tile__link .icon-link}
+:::
+
+::: {.action-tile}
+<div class="card-icon card-icon-accent" aria-hidden="true"><i class="bi bi-envelope-paper"></i></div>
+
+### Contact and Profiles
+
+Keep institutional email, ORCID, Scholar, and other profiles in one reliable contact layer.
+
+[<span>Open contact details</span><i class="bi bi-arrow-right-short" aria-hidden="true"></i>](contact.html){.action-tile__link .icon-link}
+:::
+:::
+:::
+
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Selected Work</p>
+
+## Featured Publications
+
+<p class="section-lede">
+  This section is generated from the publication IDs listed in
+  `data/featured-publications.json`, so your editorial selection remains separate
+  from Zotero exports and stays easy to maintain.
+</p>
+:::
+
+<div id="featured-publications" aria-live="polite"></div>
+:::
+
+::: {.section-surface}
+::: {.section-heading}
+<p class="section-kicker">Current Snapshot</p>
+
+## Ongoing Work and Announcements
+
+<p class="section-lede">
+  Use this area for upcoming talks, works in progress, or short notes on current projects.
+</p>
+:::
+
+::: {.info-grid}
+::: {.info-card}
+<div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-hourglass-split"></i></div>
+
+### Ongoing Research
+
+Summarize current projects, fieldwork, grant-supported research, or a book manuscript in progress.
+:::
+
+::: {.info-card}
+<div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-mic"></i></div>
+
+### Upcoming Talks
+
+A compact but visible area for seminars, panels, and conference presentations.
+:::
+
+::: {.info-card}
+<div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-grid-1x2"></i></div>
+
+### Future Expansion
+
+Prepared space for projects, teaching, notes, or curated resource lists.
+:::
+:::
+:::
+:::
+
+<script type="application/json" data-publication-source="true">
+{{< include ../data/pub-articles.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include ../data/pub-books.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include ../data/pub-conferences.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include ../data/pub-theses.json >}}
+</script>
+<script type="application/json" data-featured-source="true">
+{{< include ../data/featured-publications.json >}}
+</script>
+<script src="/assets/js/publications.js" defer></script>

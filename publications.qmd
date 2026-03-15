@@ -1,8 +1,10 @@
 ---
 title: "Yayınlar"
 description: "Makaleler, kitaplar, bildiriler ve tezler için veri odaklı yayın listesi."
-title-block: false
 page-layout: full
+format:
+  html:
+    title-block: false
 ---
 
 ::: {.page-hero}
@@ -13,24 +15,25 @@ page-layout: full
 
 <p class="page-hero__meta">Veri odaklı, filtrelenebilir ve kategori bazlı yayın sayfası</p>
 <p class="page-hero__lede">
-  Bu sayfa `data/publications.json` dosyasından üretilir. Yeni bir yayın eklemek için
-  HTML düzenlemeniz gerekmez; yalnızca veri kaydını eklemeniz ve gerekirse bağlantı
-  alanlarını güncellemeniz yeterlidir.
+  Bu sayfa `data/pub-articles.json`, `data/pub-books.json`, `data/pub-conferences.json`
+  ve `data/pub-theses.json` dosyalarından üretilir. Yeni bir yayın eklemek için HTML
+  düzenlemeniz gerekmez; yalnızca ilgili JSON dosyasını güncellemeniz yeterlidir.
 </p>
 :::
 :::
 
 ::: {.highlight-grid}
 ::: {.highlight-card}
-### Kategori Bazlı Yapı
+<p class="card-title">Kategori Bazlı Yapı</p>
 
 Makaleler, kitaplar, bildiriler ve tezler ayrı bölümlerde listelenir. Bu sayede tek bir uzun karma liste yerine akademik açıdan daha anlaşılır bir katalog oluşur.
 :::
 
 ::: {.highlight-card}
-### Geleceğe Hazır Model
+<p class="card-title">Geleceğe Hazır Model</p>
 
-Mevcut veri modeli `selected publications`, BibTeX dönüşümü veya Zotero entegrasyonu için kolay genişletilebilir.
+Mevcut veri modeli Zotero JSON alanlarını doğrudan okuyabildiği için `selected publications`,
+BibTeX dönüşümü veya ileride tam Zotero akışı için kolay genişletilebilir.
 :::
 :::
 
@@ -63,21 +66,36 @@ Mevcut veri modeli `selected publications`, BibTeX dönüşümü veya Zotero ent
 Desteklenen alanlar:
 
 - `title`
-- `authors`
+- `authors` veya Zotero `author`
 - `year`
+- `issued`
 - `venue`
 - `type`
-- `doi`
-- `url`
+- `doi` veya Zotero `DOI`
+- `url` veya Zotero `URL`
 - `pdf`
-- `abstract`
-- `featured`
+- `abstract` veya Zotero `abstractNote`
 
-Alanların tümü her kayıt için zorunlu değildir; ancak `title`, `authors`, `year` ve `type`
-alanlarını düzenli tutmak profesyonel ve tutarlı bir listeleme sağlar.
+Alanların tümü her kayıt için zorunlu değildir; ancak `title`, `author/authors`, `issued/year`
+ve `type` alanlarını düzenli tutmak profesyonel ve tutarlı bir listeleme sağlar.
+
+Ana sayfadaki öne çıkan yayınlar `data/featured-publications.json` dosyasında yalnızca kimlik
+listesi olarak tutulur.
 :::
 
-<script id="publications-data" type="application/json">
-{{< include data/publications.json >}}
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-articles.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-books.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-conferences.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-theses.json >}}
+</script>
+<script type="application/json" data-featured-source="true">
+{{< include data/featured-publications.json >}}
 </script>
 <script src="assets/js/publications.js" defer></script>

@@ -1,8 +1,10 @@
 ---
 title: "Sayfa Bulunamadı"
 description: "İstenen içerik bulunamadığında gösterilen yardımcı sayfa."
-title-block: false
 page-layout: full
+format:
+  html:
+    title-block: false
 ---
 
 ::: {.page-hero}

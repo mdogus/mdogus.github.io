@@ -1,8 +1,10 @@
 ---
 title: "İletişim"
 description: "E-posta ve akademik profiller için erişilebilir iletişim sayfası."
-title-block: false
 page-layout: full
+format:
+  html:
+    title-block: false
 ---
 
 ::: {.page-hero}
@@ -24,7 +26,7 @@ page-layout: full
 ::: {.highlight-card}
 <div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-send-check"></i></div>
 
-### Tercih Edilen İletişim
+<p class="card-title">Tercih Edilen İletişim</p>
 
 Kurumsal e-posta üzerinden doğrudan iletişim, özellikle akademik iş birlikleri, konuşma davetleri ve yayın odaklı yazışmalar için en güvenilir kanaldır.
 :::
@@ -32,7 +34,7 @@ Kurumsal e-posta üzerinden doğrudan iletişim, özellikle akademik iş birlikl
 ::: {.highlight-card}
 <div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-shield-check"></i></div>
 
-### Statik ve Güvenli
+<p class="card-title">Statik ve Güvenli</p>
 
 Sunucu tarafı form kurmadan, daha düşük bakım gerektiren ve spam yüzeyini büyütmeyen sade bir iletişim yapısı korunur.
 :::

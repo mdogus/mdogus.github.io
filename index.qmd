@@ -1,8 +1,10 @@
 ---
 title: "Ana Sayfa"
 description: "Akademik kişisel web sitesi giriş sayfası."
-title-block: false
 page-layout: full
+format:
+  html:
+    title-block: false
 ---
 
 ::: {.hero-shell}
@@ -35,7 +37,7 @@ page-layout: full
 ::: {.hero-note-card}
 <div class="card-icon" aria-hidden="true"><i class="bi bi-stars"></i></div>
 
-### Akademik Odak
+<p class="card-title">Akademik Odak</p>
 
 Bu alanı güncel araştırma temanız, devam eden projeniz veya bir kitap / makale
 hazırlığınız için kısa bir editoryal not gibi kullanabilirsiniz.
@@ -45,7 +47,7 @@ hazırlığınız için kısa bir editoryal not gibi kullanabilirsiniz.
 ::: {.metric-card}
 <div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-binoculars"></i></div>
 
-### Araştırma
+<p class="card-title">Araştırma</p>
 
 Açık bilim, bilgi mimarisi, dijital akademik sunum
 :::
@@ -53,7 +55,7 @@ Açık bilim, bilgi mimarisi, dijital akademik sunum
 ::: {.metric-card}
 <div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-collection"></i></div>
 
-### Yayın
+<p class="card-title">Yayın</p>
 
 Makaleler, bildiriler, kitaplar ve tezler için genişleyebilir katalog
 :::
@@ -61,7 +63,7 @@ Makaleler, bildiriler, kitaplar ve tezler için genişleyebilir katalog
 ::: {.metric-card}
 <div class="card-icon card-icon-muted" aria-hidden="true"><i class="bi bi-easel2"></i></div>
 
-### Öğretim
+<p class="card-title">Öğretim</p>
 
 İleride dersler, projeler ve kısa yazılar için hazır altyapı
 :::
@@ -162,8 +164,9 @@ Kurumsal e-posta, ORCID, Scholar ve diğer akademik profilleri tek bir güvenili
 ## Öne Çıkan Yayınlar
 
 <p class="section-lede">
-  Bu bölüm `data/publications.json` dosyasındaki `featured: true` alanına göre otomatik üretilir.
-  Böylece ana sayfanız, editoryal olarak seçilmiş bir yayın vitrini gibi davranır.
+  Bu bölüm `data/featured-publications.json` dosyasındaki yayın kimliklerine göre otomatik
+  üretilir. Böylece Zotero kayıtlarını doğrudan güncellerken seçili yayın vitrini ayrı ve
+  sürdürülebilir biçimde korunur.
 </p>
 :::
 
@@ -210,7 +213,19 @@ Projeler, öğretim, kısa yazılar veya seçili kaynak listeleri için hazır b
 :::
 :::
 
-<script id="publications-data" type="application/json">
-{{< include data/publications.json >}}
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-articles.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-books.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-conferences.json >}}
+</script>
+<script type="application/json" data-publication-source="true">
+{{< include data/pub-theses.json >}}
+</script>
+<script type="application/json" data-featured-source="true">
+{{< include data/featured-publications.json >}}
 </script>
 <script src="assets/js/publications.js" defer></script>

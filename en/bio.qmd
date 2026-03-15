@@ -1,0 +1,118 @@
+---
+title: "Bio"
+description: "Academic biography, education history, and research areas."
+lang: en
+page-layout: full
+format:
+  html:
+    title-block: false
+---
+
+::: {.page-hero}
+::: {.page-hero__content}
+<p class="page-hero__eyebrow">Bio</p>
+
+# Academic Biography
+
+<p class="page-hero__meta">Academic title | Department / Institution</p>
+<p class="page-hero__lede">
+  This page is designed to present your academic identity, research approach,
+  and educational background in readable content blocks. It aims for more than
+  a short profile, but less than a dense CV.
+</p>
+:::
+:::
+
+::: {.bio-layout}
+::: {.bio-main}
+::: {.bio-section-card}
+## Academic Biography
+
+[Ad Soyad] works as [academic title] at [institution / department].
+Research focuses on [core areas], [methods], and [applied contexts].
+This section can be expanded into two or three paragraphs that summarize both
+your scholarly profile and your research approach.
+
+If a longer academic biography is needed for national or international contexts,
+this page can easily be extended.
+:::
+
+::: {.bio-section-card}
+## Research Interests
+
+<ul class="detail-pills">
+  <li>Research area / theme 1</li>
+  <li>Research area / theme 2</li>
+  <li>Research area / theme 3</li>
+  <li>Methodological approach</li>
+</ul>
+:::
+
+::: {.bio-section-card}
+## Education
+
+<ul class="timeline-list">
+  <li>
+    <span class="timeline-year">PhD</span>
+    <strong>University Name</strong><br />
+    Field / programme, year
+  </li>
+  <li>
+    <span class="timeline-year">MA / MSc</span>
+    <strong>University Name</strong><br />
+    Field / programme, year
+  </li>
+  <li>
+    <span class="timeline-year">BA / BSc</span>
+    <strong>University Name</strong><br />
+    Department, year
+  </li>
+</ul>
+:::
+
+::: {.bio-section-card}
+## Awards, Roles, and Collaborations
+
+<ul class="detail-list">
+  <li>Optional award, grant, or research support</li>
+  <li>Editorial role, committee membership, or coordination duty</li>
+  <li>Research group, center, or network for collaboration</li>
+</ul>
+:::
+:::
+
+::: {.section-card .bio-side}
+## Summary {#bio-summary-title}
+
+::: {.bio-details}
+::: {}
+**Institution**  
+University / research institution
+:::
+
+::: {}
+**Department**  
+Department or research unit
+:::
+
+::: {}
+**Expertise**  
+Academic field, subfield, or thematic specialization
+:::
+
+::: {}
+**Languages**  
+Turkish, English, others
+:::
+:::
+
+<p class="page-note">
+  The CV PDF area is ready. Add your file at <code>assets/files/cv.pdf</code>
+  and activate the link below.
+</p>
+
+::: {.button-row}
+[CV PDF coming soon](#){.button-link .disabled aria-disabled="true"}
+:::
+:::
+:::

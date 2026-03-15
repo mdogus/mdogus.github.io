@@ -1,35 +1,97 @@
-const PUBLICATION_LABELS = {
-  article: "Makale",
-  book: "Kitap",
-  conference: "Bildiri",
-  thesis: "Tez",
+const SITE_LOCALE = document.documentElement.lang.startsWith("en") ? "en" : "tr";
+
+const PUBLICATION_UI = {
+  tr: {
+    labels: {
+      article: "Makale",
+      book: "Kitap",
+      conference: "Bildiri",
+      thesis: "Tez",
+      publication: "Yayın",
+    },
+    noFeaturedData: "Öne çıkan yayın verisi bulunamadı.",
+    noPublicationData: "Yayın kaydı bulunamadı.",
+    noFeaturedSelection: "Henüz öne çıkan yayın seçilmedi.",
+    listedCount: (count) => `${count} yayın listeleniyor.`,
+    noFilteredResults: "Seçili filtrelerle eşleşen yayın bulunamadı.",
+    doiLabel: "DOI kaydını aç",
+    urlLabel: "Yayın sayfasını aç",
+    pdfLabel: "PDF dosyasını aç",
+    abstractLabel: "Özet",
+    abstractMore: "Devamını gör",
+    abstractLess: "Daha az göster",
+  },
+  en: {
+    labels: {
+      article: "Article",
+      book: "Book",
+      conference: "Conference Paper",
+      thesis: "Thesis",
+      publication: "Publication",
+    },
+    noFeaturedData: "No featured publication data was found.",
+    noPublicationData: "No publication records were found.",
+    noFeaturedSelection: "No featured publications have been selected yet.",
+    listedCount: (count) => `${count} publications listed.`,
+    noFilteredResults: "No publications match the selected filters.",
+    doiLabel: "Open DOI record",
+    urlLabel: "Open publication page",
+    pdfLabel: "Open PDF file",
+    abstractLabel: "Abstract",
+    abstractMore: "Read more",
+    abstractLess: "Show less",
+  },
 };
 
+const PUBLICATION_TYPE_MAP = {
+  article: "article",
+  "article-journal": "article",
+  "article-magazine": "article",
+  "article-newspaper": "article",
+  book: "book",
+  chapter: "book",
+  "entry-encyclopedia": "book",
+  "entry-dictionary": "book",
+  conference: "conference",
+  "paper-conference": "conference",
+  speech: "conference",
+  presentation: "conference",
+  thesis: "thesis",
+  dissertation: "thesis",
+};
+
+const ABSTRACT_PREVIEW_LENGTH = 220;
+
 document.addEventListener("DOMContentLoaded", () => {
+  const copy = PUBLICATION_UI[SITE_LOCALE];
+  const featuredIds = readFeaturedPublicationIds();
   const publications = readPublications();
 
   if (!publications.length) {
-    renderEmptyState(document.getElementById("featured-publications"), "Öne çıkan yayın verisi bulunamadı.");
-    renderEmptyState(document.getElementById("publications-directory"), "Yayın kaydı bulunamadı.");
+    renderEmptyState(document.getElementById("featured-publications"), copy.noFeaturedData);
+    renderEmptyState(document.getElementById("publications-directory"), copy.noPublicationData);
     return;
   }
 
-  initFeaturedPublications(publications);
+  initFeaturedPublications(publications, featuredIds);
   initPublicationDirectory(publications);
 });
 
 function readPublications() {
-  const source = document.getElementById("publications-data");
+  const sources = Array.from(document.querySelectorAll("[data-publication-source='true']"));
 
-  if (!source) {
+  if (!sources.length) {
     return [];
   }
 
   try {
-    const parsed = JSON.parse(source.textContent);
-
-    return parsed
+    return sources
+      .flatMap((source) => {
+        const parsed = JSON.parse(source.textContent);
+        return Array.isArray(parsed) ? parsed : [];
+      })
       .map((item) => normalizePublication(item))
+      .filter((item) => item.title && item.year && item.type)
       .sort(comparePublications);
   } catch (error) {
     console.error("Publication data could not be parsed.", error);
@@ -37,16 +99,136 @@ function readPublications() {
   }
 }
 
+function readFeaturedPublicationIds() {
+  const source = document.querySelector("[data-featured-source='true']");
+
+  if (!source) {
+    return new Set();
+  }
+
+  try {
+    const parsed = JSON.parse(source.textContent);
+
+    if (!Array.isArray(parsed)) {
+      return new Set();
+    }
+
+    return new Set(
+      parsed
+        .map((item) => String(item || "").trim())
+        .filter(Boolean),
+    );
+  } catch (error) {
+    console.error("Featured publication data could not be parsed.", error);
+    return new Set();
+  }
+}
+
 function normalizePublication(item) {
+  const type = normalizeType(item.type || item.itemType);
+
   return {
-    ...item,
-    authors: Array.isArray(item.authors) ? item.authors : [item.authors].filter(Boolean),
-    year: Number(item.year) || 0,
-    venue: item.venue || "",
-    type: item.type || "article",
-    abstract: item.abstract || "",
+    id: item.id || buildPublicationId(item.title, type, extractYear(item)),
+    title: item.title || "",
+    authors: normalizeAuthors(item.authors || item.author),
+    year: extractYear(item),
+    venue: normalizeVenue(item, type),
+    type,
+    doi: normalizeDoi(item.doi || item.DOI),
+    url: item.url || item.URL || "",
+    pdf: item.pdf || "",
+    abstract: item.abstract || item.abstractNote || "",
     featured: Boolean(item.featured),
   };
+}
+
+function normalizeType(rawType) {
+  return PUBLICATION_TYPE_MAP[rawType] || "article";
+}
+
+function normalizeAuthors(authors) {
+  if (!authors) {
+    return [];
+  }
+
+  if (!Array.isArray(authors)) {
+    return [String(authors)].filter(Boolean);
+  }
+
+  return authors
+    .map((author) => {
+      if (typeof author === "string") {
+        return author;
+      }
+
+      if (author.literal) {
+        return author.literal;
+      }
+
+      return [author.given, author.family].filter(Boolean).join(" ").trim();
+    })
+    .filter(Boolean);
+}
+
+function extractYear(item) {
+  if (item.year) {
+    return Number(item.year) || 0;
+  }
+
+  const issuedYear = item.issued?.["date-parts"]?.[0]?.[0];
+
+  if (issuedYear) {
+    return Number(issuedYear) || 0;
+  }
+
+  const dateCandidate = item.date || item.accessed?.["date-parts"]?.[0]?.[0];
+  const yearMatch = String(dateCandidate || "").match(/\d{4}/);
+  return yearMatch ? Number(yearMatch[0]) : 0;
+}
+
+function normalizeVenue(item, type) {
+  const candidates = [
+    item.venue,
+    item["container-title"],
+    item["event-title"],
+    item.publisher,
+    item.institution,
+    item.university,
+    item["collection-title"],
+  ];
+
+  const venue = candidates.find((value) => typeof value === "string" && value.trim());
+
+  if (venue) {
+    return venue.trim();
+  }
+
+  if (type === "thesis" && item.genre) {
+    return item.genre;
+  }
+
+  return "";
+}
+
+function normalizeDoi(value) {
+  if (!value) {
+    return "";
+  }
+
+  return String(value)
+    .trim()
+    .replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, "")
+    .replace(/^doi:\s*/i, "");
+}
+
+function buildPublicationId(title, type, year) {
+  const slug = String(title || "publication")
+    .toLocaleLowerCase("tr")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 48);
+
+  return [type, year || "undated", slug].filter(Boolean).join("-");
 }
 
 function comparePublications(left, right) {
@@ -54,20 +236,22 @@ function comparePublications(left, right) {
     return right.year - left.year;
   }
 
-  return left.title.localeCompare(right.title, "tr");
+  return left.title.localeCompare(right.title, SITE_LOCALE);
 }
 
-function initFeaturedPublications(publications) {
+function initFeaturedPublications(publications, featuredIds) {
   const container = document.getElementById("featured-publications");
 
   if (!container) {
     return;
   }
 
-  const featuredItems = publications.filter((item) => item.featured).slice(0, 3);
+  const featuredItems = publications
+    .filter((item) => featuredIds.has(String(item.id)) || item.featured)
+    .slice(0, 3);
 
   if (!featuredItems.length) {
-    renderEmptyState(container, "Henüz öne çıkan yayın seçilmedi.");
+    renderEmptyState(container, PUBLICATION_UI[SITE_LOCALE].noFeaturedSelection);
     return;
   }
 
@@ -99,7 +283,7 @@ function initPublicationDirectory(publications) {
       return categoryMatch && yearMatch;
     });
 
-    feedback.textContent = `${filtered.length} yayın listeleniyor.`;
+    feedback.textContent = PUBLICATION_UI[SITE_LOCALE].listedCount(filtered.length);
     renderGroupedPublications(container, filtered, selectedCategory);
   };
 
@@ -125,12 +309,13 @@ function renderGroupedPublications(container, publications, selectedCategory) {
   container.replaceChildren();
 
   if (!publications.length) {
-    renderEmptyState(container, "Seçili filtrelerle eşleşen yayın bulunamadı.");
+    renderEmptyState(container, PUBLICATION_UI[SITE_LOCALE].noFilteredResults);
     return;
   }
 
   const categories = selectedCategory === "all"
-    ? Object.keys(PUBLICATION_LABELS).filter((type) => publications.some((item) => item.type === type))
+    ? Object.keys(PUBLICATION_UI[SITE_LOCALE].labels).filter((type) =>
+      type !== "publication" && publications.some((item) => item.type === type))
     : [selectedCategory];
 
   categories.forEach((type) => {
@@ -144,7 +329,7 @@ function renderGroupedPublications(container, publications, selectedCategory) {
     section.className = "publication-section";
 
     const heading = document.createElement("h3");
-    heading.textContent = `${PUBLICATION_LABELS[type]} (${items.length})`;
+    heading.textContent = `${PUBLICATION_UI[SITE_LOCALE].labels[type]} (${items.length})`;
     section.append(heading);
 
     const years = [...new Set(items.map((item) => item.year))].sort((left, right) => right - left);
@@ -180,7 +365,7 @@ function buildPublicationList(publications, options = {}) {
     meta.className = "publication-meta";
 
     if (includeTypeBadge) {
-      meta.append(buildBadge(PUBLICATION_LABELS[item.type] || "Yayın"));
+      meta.append(buildBadge(PUBLICATION_UI[SITE_LOCALE].labels[item.type] || PUBLICATION_UI[SITE_LOCALE].labels.publication));
     }
 
     meta.append(`${item.year}`);
@@ -211,9 +396,7 @@ function buildPublicationList(publications, options = {}) {
     }
 
     if (item.abstract) {
-      const abstract = document.createElement("p");
-      abstract.className = "publication-abstract";
-      abstract.textContent = item.abstract;
+      const abstract = buildAbstract(item.abstract);
       article.append(abstract);
     }
 
@@ -231,6 +414,72 @@ function buildBadge(label) {
   return badge;
 }
 
+function buildAbstract(text) {
+  const abstractText = String(text || "").trim();
+
+  if (!abstractText) {
+    return null;
+  }
+
+  if (abstractText.length <= ABSTRACT_PREVIEW_LENGTH) {
+    const abstract = document.createElement("p");
+    abstract.className = "publication-abstract";
+    abstract.append(createAbstractLabel());
+
+    const body = document.createElement("span");
+    body.className = "publication-abstract-text";
+    body.textContent = abstractText;
+    abstract.append(body);
+    return abstract;
+  }
+
+  const details = document.createElement("details");
+  details.className = "publication-abstract publication-abstract-collapsible";
+
+  const summary = document.createElement("summary");
+  summary.append(createAbstractLabel());
+
+  const preview = document.createElement("span");
+  preview.className = "publication-abstract-preview";
+  preview.textContent = truncateText(abstractText, ABSTRACT_PREVIEW_LENGTH);
+  summary.append(preview);
+
+  const toggleMore = document.createElement("span");
+  toggleMore.className = "publication-abstract-toggle publication-abstract-toggle-more";
+  toggleMore.textContent = PUBLICATION_UI[SITE_LOCALE].abstractMore;
+  summary.append(toggleMore);
+
+  const toggleLess = document.createElement("span");
+  toggleLess.className = "publication-abstract-toggle publication-abstract-toggle-less";
+  toggleLess.textContent = PUBLICATION_UI[SITE_LOCALE].abstractLess;
+  summary.append(toggleLess);
+
+  const fullText = document.createElement("p");
+  fullText.className = "publication-abstract-full";
+  fullText.textContent = abstractText;
+
+  details.append(summary, fullText);
+  return details;
+}
+
+function createAbstractLabel() {
+  const label = document.createElement("span");
+  label.className = "publication-abstract-label";
+  label.textContent = PUBLICATION_UI[SITE_LOCALE].abstractLabel;
+  return label;
+}
+
+function truncateText(text, maxLength) {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  const trimmed = text.slice(0, maxLength).trim();
+  const safeBreak = trimmed.lastIndexOf(" ");
+  const excerpt = safeBreak > maxLength * 0.65 ? trimmed.slice(0, safeBreak) : trimmed;
+  return `${excerpt}...`;
+}
+
 function buildLinks(item) {
   const hasLinks = item.doi || item.url || item.pdf;
 
@@ -242,15 +491,15 @@ function buildLinks(item) {
   container.className = "publication-links";
 
   if (item.doi) {
-    container.append(createLink(`https://doi.org/${item.doi}`, "DOI kaydını aç", "link-45deg"));
+    container.append(createLink(`https://doi.org/${item.doi}`, PUBLICATION_UI[SITE_LOCALE].doiLabel, "link-45deg"));
   }
 
   if (item.url) {
-    container.append(createLink(item.url, "Yayın sayfasını aç", "box-arrow-up-right"));
+    container.append(createLink(item.url, PUBLICATION_UI[SITE_LOCALE].urlLabel, "box-arrow-up-right"));
   }
 
   if (item.pdf) {
-    container.append(createLink(item.pdf, "PDF dosyasını aç", "file-earmark-pdf"));
+    container.append(createLink(item.pdf, PUBLICATION_UI[SITE_LOCALE].pdfLabel, "file-earmark-pdf"));
   }
 
   return container;

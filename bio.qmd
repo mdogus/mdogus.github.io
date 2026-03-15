@@ -1,8 +1,10 @@
 ---
 title: "Bio"
 description: "Akademik biyografi, eğitim geçmişi ve araştırma alanları."
-title-block: false
 page-layout: full
+format:
+  html:
+    title-block: false
 ---
 
 ::: {.page-hero}
