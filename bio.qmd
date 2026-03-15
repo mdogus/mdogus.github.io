@@ -1,0 +1,69 @@
+---
+title: "Bio"
+description: "Akademik biyografi, eğitim geçmişi ve araştırma alanları."
+---
+
+::: {.bio-layout}
+::: {}
+## Akademik Biyografi
+
+[Ad Soyad], [kurum/bölüm] bünyesinde [akademik unvan] olarak çalışmaktadır.
+Araştırmaları [temel alanlar], [yöntemler] ve [uygulama bağlamları] üzerinde yoğunlaşır.
+Bu bölüm iki ya da üç paragrafla hem akademik kimliğinizi hem de araştırma yaklaşımınızı
+özetleyecek şekilde düzenlenebilir.
+
+Ulusal ve uluslararası yayınlar, disiplinlerarası iş birlikleri ve öğretim faaliyetleri
+için daha uzun bir biyografi gerektiğinde bu sayfa genişletilebilir. Metni Türkçe veya
+İngilizce kullanabilir, dil tercihinize göre tüm siteyi tutarlı biçimde güncelleyebilirsiniz.
+
+## Araştırma İlgi Alanları
+
+- Araştırma alanı / tema 1
+- Araştırma alanı / tema 2
+- Araştırma alanı / tema 3
+- Yöntemsel ilgi alanı / yaklaşım
+
+## Eğitim
+
+- Doktora, Üniversite Adı, Alan, Yıl
+- Yüksek Lisans, Üniversite Adı, Alan, Yıl
+- Lisans, Üniversite Adı, Bölüm, Yıl
+
+## Ödüller, Görevler ve İş Birlikleri
+
+- İsteğe bağlı ödül, burs veya destek programı
+- Editörlük, kurul üyeliği veya idari görev
+- İş birliği yapılan araştırma grubu, laboratuvar veya ağ
+:::
+
+::: {.content-card .bio-side}
+## Kısa Bilgiler {#bio-summary-title}
+
+<dl class="bio-details">
+  <div>
+    <dt>Kurum</dt>
+    <dd>Üniversite / Araştırma kurumu</dd>
+  </div>
+  <div>
+    <dt>Bölüm</dt>
+    <dd>Bölüm veya araştırma birimi</dd>
+  </div>
+  <div>
+    <dt>Uzmanlık</dt>
+    <dd>Akademik alan, alt alan veya tematik uzmanlık</dd>
+  </div>
+  <div>
+    <dt>Diller</dt>
+    <dd>Türkçe, İngilizce, diğerleri</dd>
+  </div>
+</dl>
+
+<p class="page-note">
+  CV PDF alanı hazırdır. Dosyanızı <code>assets/files/cv.pdf</code> yoluna ekleyip
+  aşağıdaki bağlantıyı etkinleştirebilirsiniz.
+</p>
+<p>
+  <span class="button-link disabled" aria-disabled="true">CV PDF eklenecek</span>
+</p>
+:::
+:::

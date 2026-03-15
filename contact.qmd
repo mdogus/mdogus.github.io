@@ -1,0 +1,59 @@
+---
+title: "İletişim"
+description: "E-posta ve akademik profiller için erişilebilir iletişim sayfası."
+---
+
+<section class="contact-shell" aria-labelledby="contact-title">
+  <h2 id="contact-title">İletişim Kanalları</h2>
+  <p>
+    Bu site, backend gerektiren bir iletişim formu yerine güvenli ve düşük bakım maliyetli
+    statik iletişim yaklaşımını benimser. Tercih edilen yöntem kurumsal e-posta ve akademik profil bağlantılarıdır.
+  </p>
+
+  <dl class="contact-list">
+    <div class="content-card">
+      <dt>E-posta</dt>
+      <dd>
+        <a href="mailto:ad.soyad@kurum.edu.tr">Kurumsal e-posta adresine yazın</a>
+      </dd>
+    </div>
+    <div class="content-card">
+      <dt>ORCID</dt>
+      <dd>
+        <a href="https://orcid.org/0000-0000-0000-0000">ORCID profilini görüntüleyin</a>
+      </dd>
+    </div>
+    <div class="content-card">
+      <dt>Google Scholar</dt>
+      <dd>
+        <a href="https://scholar.google.com/">Google Scholar kaydını açın</a>
+      </dd>
+    </div>
+    <div class="content-card">
+      <dt>ResearchGate</dt>
+      <dd>
+        <a href="https://www.researchgate.net/">ResearchGate profilini görüntüleyin</a>
+      </dd>
+    </div>
+    <div class="content-card">
+      <dt>GitHub</dt>
+      <dd>
+        <a href="https://github.com/mdogus">GitHub profilini açın</a>
+      </dd>
+    </div>
+  </dl>
+</section>
+
+## Ek Akademik Profiller
+
+İhtiyaca göre aşağıdaki bağlantılar da aynı düzende eklenebilir:
+
+- Academia.edu
+- LinkedIn
+- SSRN
+- Kurumsal personel sayfası
+
+## İletişim Notu
+
+Eğer e-posta adresinizi açık biçimde paylaşmak istemezseniz, iletişim sayfasında yalnızca kurumsal profil
+bağlantılarını tutabilir veya adresi görsel olmayan basit bir obfuscation yaklaşımıyla koruyabilirsiniz.

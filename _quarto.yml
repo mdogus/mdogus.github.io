@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - assets/
+
+website:
+  title: "Ad Soyad"
+  description: "Akademik içeriklerini düşük bakım maliyetiyle yöneten kişisel web sitesi."
+  site-url: "https://mdogus.github.io/"
+  open-graph: true
+  twitter-card: true
+  search:
+    location: navbar
+    type: textbox
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Ana Sayfa
+      - href: bio.qmd
+        text: Bio
+      - href: publications.qmd
+        text: Yayınlar
+      - href: contact.qmd
+        text: İletişim
+  page-footer:
+    left: "© 2026 Ad Soyad"
+    right: "Quarto, GitHub Pages ve GitHub Actions ile yayınlanır."
+
+lang: tr
+
+format:
+  html:
+    theme: none
+    css: styles.css
+    toc: false
+    page-layout: article
+    include-before-body:
+      - includes/skip-link.html
+    include-in-header:
+      - includes/head-meta.html

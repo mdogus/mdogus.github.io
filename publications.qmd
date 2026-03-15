@@ -1,0 +1,63 @@
+---
+title: "Yayınlar"
+description: "Makaleler, kitaplar, bildiriler ve tezler için veri odaklı yayın listesi."
+---
+
+Bu sayfa `data/publications.json` dosyasından üretilir. Yeni bir yayın eklemek için HTML düzenlemeniz gerekmez;
+yalnızca veri kaydını eklemeniz ve gerekirse bağlantı alanlarını güncellemeniz yeterlidir.
+
+<section class="publication-shell" aria-labelledby="publication-directory-title">
+  <h2 id="publication-directory-title">Yayın Dizini</h2>
+  <p class="publication-summary">
+    Kayıtlar kategoriye göre ayrılır, yıl bazında ters kronolojik sıralanır ve ileride
+    “selected publications” ile “all publications” ayrımı yapmaya hazırdır.
+  </p>
+
+  <div class="publication-toolbar">
+    <form class="publication-filters" aria-label="Yayın filtreleri">
+      <div class="field-group">
+        <label for="category-filter">Kategori</label>
+        <select id="category-filter" name="category">
+          <option value="all">Tüm kategoriler</option>
+          <option value="article">Makaleler</option>
+          <option value="book">Kitaplar</option>
+          <option value="conference">Bildiriler</option>
+          <option value="thesis">Tezler</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="year-filter">Yıl</label>
+        <select id="year-filter" name="year">
+          <option value="all">Tüm yıllar</option>
+        </select>
+      </div>
+    </form>
+
+    <p id="publication-feedback" class="publication-summary" aria-live="polite"></p>
+  </div>
+
+  <div id="publications-directory"></div>
+</section>
+
+## Veri Şeması
+
+Desteklenen alanlar:
+
+- `title`
+- `authors`
+- `year`
+- `venue`
+- `type`
+- `doi`
+- `url`
+- `pdf`
+- `abstract`
+- `featured`
+
+Alanların tümü her kayıt için zorunlu değildir; ancak `title`, `authors`, `year` ve `type`
+alanlarını düzenli tutmak profesyonel ve tutarlı bir listeleme sağlar.
+
+<script id="publications-data" type="application/json">
+{{< include data/publications.json >}}
+</script>
+<script src="assets/js/publications.js" defer></script>

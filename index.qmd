@@ -1,0 +1,75 @@
+---
+title: "Ana Sayfa"
+description: "Akademik kişisel web sitesi giriş sayfası."
+title-block: false
+page-layout: full
+---
+
+<section class="hero-panel" aria-labelledby="home-title">
+  <p class="hero-eyebrow">Akademik Kişisel Web Sitesi</p>
+  <h1 id="home-title">Ad Soyad</h1>
+  <p class="hero-subtitle">Akademik unvan | Bölüm / Kurum</p>
+  <p class="hero-lede">
+    Araştırma, yayın ve akademik duyurularımı sade, hızlı ve düşük bakım maliyetli
+    bir yapı içinde paylaşmak için tasarlanmış kişisel web siteme hoş geldiniz.
+    Bu metni kendi uzmanlık alanınıza ve güncel akademik pozisyonunuza göre düzenleyebilirsiniz.
+  </p>
+  <div class="hero-actions">
+    <a class="button-link" href="publications.html">Yayınlara Git</a>
+    <a class="button-link button-link-secondary" href="contact.html">İletişim Bilgileri</a>
+  </div>
+</section>
+
+## Araştırma Alanları
+
+<div class="topic-grid">
+  <article class="topic-card">
+    <h3>Alan 1</h3>
+    <p>Örneğin dijital beşeri bilimler, eğitim teknolojileri, dil çalışmaları veya sosyal teori.</p>
+  </article>
+  <article class="topic-card">
+    <h3>Alan 2</h3>
+    <p>Yöntem, tema veya alt uzmanlık başlığınızı kısa ve anlaşılır biçimde özetleyin.</p>
+  </article>
+  <article class="topic-card">
+    <h3>Alan 3</h3>
+    <p>Disiplinlerarası çalışma alanlarınızı ve iş birliği potansiyelinizi belirtin.</p>
+  </article>
+</div>
+
+## Hızlı Erişim
+
+<div class="quick-links">
+  <a class="button-link button-link-secondary" href="bio.html">Biyografiyi Oku</a>
+  <a class="button-link button-link-secondary" href="publications.html">Tüm Yayınları Gör</a>
+  <a class="button-link button-link-secondary" href="contact.html">Akademik Profiller</a>
+</div>
+
+## Öne Çıkan Yayınlar
+
+Bu bölüm `data/publications.json` dosyasındaki `featured: true` alanına göre otomatik üretilir.
+Yeni bir öne çıkan yayın eklemek için yalnızca veri dosyasını güncellemeniz yeterlidir.
+
+<div id="featured-publications" aria-live="polite"></div>
+
+## Güncel Çalışmalar ve Duyurular
+
+<div class="info-grid">
+  <article class="content-card">
+    <h3>Devam Eden Araştırmalar</h3>
+    <p>Yürüttüğünüz proje, saha çalışması veya kitap hazırlığı gibi güncel faaliyetleri burada özetleyin.</p>
+  </article>
+  <article class="content-card">
+    <h3>Yaklaşan Sunumlar</h3>
+    <p>Konuşma, panel, seminer veya konferans bildirimleri için kısa duyuru alanı hazırdır.</p>
+  </article>
+  <article class="content-card">
+    <h3>İçerik Genişleme Alanı</h3>
+    <p>Projeler, öğretim, kısa yazılar veya seçili kaynak listeleri için bu yapıyı ileride kolayca genişletebilirsiniz.</p>
+  </article>
+</div>
+
+<script id="publications-data" type="application/json">
+{{< include data/publications.json >}}
+</script>
+<script src="assets/js/publications.js" defer></script>
