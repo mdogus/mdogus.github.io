@@ -1,7 +1,5 @@
 public/
 resources/_gen/
 .hugo_build.lock
-_site/
-.quarto/
 .DS_Store
 Thumbs.db

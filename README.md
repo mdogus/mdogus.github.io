@@ -75,7 +75,7 @@ Site iki dillidir:
 
 Bu repo Hugo'ya geçirildi çünkü:
 
-- Tema ve şablon katmanı Quarto'ya göre daha esnek
+- Tema ve şablon katmanı kişisel akademik site ihtiyaçları için daha esnek
 - Kişisel site ve editoryal görünüm için daha uygun bir layout modeli sunuyor
 - Çok dilli içerik, partial ve veri odaklı yayın mimarisi Hugo'da net biçimde ayrışıyor
 - GitHub Pages deploy akışı sade ve hızlı
