@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="page-hero__meta">{{ .Params.meta }}</p>
+    <p class="page-hero__lede">{{ .Params.lede }}</p>
+  </div>
+</section>
+
+<section class="panel-grid">
+  {{ range .Params.highlights }}
+  <article class="panel panel-card">
+    <h2>{{ .title }}</h2>
+    <p>{{ .text }}</p>
+  </article>
+  {{ end }}
+</section>
+
+<section class="content-section">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">{{ .Params.directory_eyebrow }}</p>
+    <h2>{{ .Params.directory_title }}</h2>
+    <p>{{ .Params.directory_text }}</p>
+  </div>
+
+  <div class="publication-toolbar">
+    <form class="publication-filters" aria-label="{{ i18n "publication_filters" }}">
+      <div class="field-group">
+        <label for="category-filter">{{ i18n "category_label" }}</label>
+        <select id="category-filter" name="category">
+          <option value="all">{{ i18n "all_categories" }}</option>
+          <option value="article">{{ if eq .Site.Language.Lang "tr" }}Makaleler{{ else }}Articles{{ end }}</option>
+          <option value="book">{{ if eq .Site.Language.Lang "tr" }}Kitaplar{{ else }}Books{{ end }}</option>
+          <option value="conference">{{ if eq .Site.Language.Lang "tr" }}Bildiriler{{ else }}Conference papers{{ end }}</option>
+          <option value="thesis">{{ if eq .Site.Language.Lang "tr" }}Tezler{{ else }}Theses{{ end }}</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="year-filter">{{ i18n "year_label" }}</label>
+        <select id="year-filter" name="year">
+          <option value="all">{{ i18n "all_years" }}</option>
+        </select>
+      </div>
+    </form>
+    <p id="publication-feedback" class="publication-summary" aria-live="polite"></p>
+  </div>
+
+  <div id="publications-directory"></div>
+</section>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ partial "publication-data.html" . }}
+  <script src="{{ "js/publications.js" | relURL }}" defer></script>
+{{ end }}

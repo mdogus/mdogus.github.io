@@ -1,0 +1,47 @@
+[skip_to_content]
+other = "Skip to main content"
+
+[language_switcher]
+other = "Language"
+
+[footer_navigation]
+other = "Footer navigation"
+
+[footer_profiles]
+other = "Academic profiles"
+
+[all_categories]
+other = "All categories"
+
+[all_years]
+other = "All years"
+
+[category_label]
+other = "Category"
+
+[year_label]
+other = "Year"
+
+[publication_filters]
+other = "Publication filters"
+
+[not_found_title]
+other = "The page you are looking for could not be found"
+
+[not_found_lede]
+other = "The link may have moved, been removed, or the address may have been entered incorrectly."
+
+[back_home]
+other = "Back Home"
+
+[open_publications]
+other = "Open Publications"
+
+[social_links]
+other = "Social links"
+
+[home_navigation]
+other = "Home navigation"
+
+[primary_navigation]
+other = "Primary navigation"

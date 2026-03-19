@@ -1,0 +1,62 @@
+{{ define "main" }}
+<section class="spotlight">
+  <div class="spotlight__inner">
+    <p class="spotlight__eyebrow">{{ .Params.eyebrow }}</p>
+    <h1 class="spotlight__title">{{ .Params.home_title | default .Site.Title }}</h1>
+    <p class="spotlight__subtitle">{{ .Params.subtitle }}</p>
+    <p class="spotlight__lede">{{ .Params.lede }}</p>
+
+    <ul class="spotlight__tags" role="list">
+      {{ range .Params.tags }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+
+    <div class="spotlight__social" aria-label="{{ i18n "social_links" }}">
+      {{ range .Site.Params.social }}
+      <a class="social-link" href="{{ .url }}" aria-label="{{ .label }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>
+        {{ partial "icon.html" .icon }}
+      </a>
+      {{ end }}
+    </div>
+
+    <nav class="spotlight__nav" aria-label="{{ i18n "home_navigation" }}">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</section>
+
+<section class="home-grid">
+  <div class="panel">
+    <p class="panel__eyebrow">{{ .Params.focus.eyebrow }}</p>
+    <h2>{{ .Params.focus.title }}</h2>
+    <p>{{ .Params.focus.text }}</p>
+  </div>
+
+  <div class="panel-grid">
+    {{ range .Params.action_cards }}
+    <article class="panel panel-card">
+      <h3>{{ .title }}</h3>
+      <p>{{ .text }}</p>
+      <a class="panel-card__link" href="{{ .url | relLangURL }}">{{ .link_label }}</a>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">{{ .Params.selected_work_eyebrow }}</p>
+    <h2>{{ .Params.selected_work_title }}</h2>
+    <p>{{ .Params.selected_work_text }}</p>
+  </div>
+  <div id="featured-publications"></div>
+</section>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ partial "publication-data.html" . }}
+  <script src="{{ "js/publications.js" | relURL }}" defer></script>
+{{ end }}

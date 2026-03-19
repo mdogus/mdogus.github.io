@@ -1,0 +1,14 @@
+{{- $page := .page -}}
+{{- $lang := .lang -}}
+{{- if eq $page.Kind "404" -}}
+  {{- if eq $lang "en" -}}/en/404.html{{- else -}}/404.html{{- end -}}
+{{- else if eq $page.Site.Language.Lang $lang -}}
+  {{- $page.RelPermalink -}}
+{{- else -}}
+  {{- $matches := where $page.AllTranslations "Language.Lang" $lang -}}
+  {{- with index $matches 0 -}}
+    {{- .RelPermalink -}}
+  {{- else -}}
+    {{- if eq $lang "en" -}}/en/{{- else -}}/{{- end -}}
+  {{- end -}}
+{{- end -}}

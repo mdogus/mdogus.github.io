@@ -1,0 +1,52 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="page-hero__meta">{{ .Params.meta }}</p>
+    <p class="page-hero__lede">{{ .Params.lede }}</p>
+  </div>
+</section>
+
+<section class="panel-grid">
+  {{ range .Params.highlights }}
+  <article class="panel panel-card">
+    <h2>{{ .title }}</h2>
+    <p>{{ .text }}</p>
+  </article>
+  {{ end }}
+</section>
+
+<section class="content-section">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">{{ .Params.channels_eyebrow }}</p>
+    <h2>{{ .Params.channels_title }}</h2>
+    <p>{{ .Params.channels_text }}</p>
+  </div>
+
+  <div class="contact-grid">
+    {{ range .Params.contacts }}
+    <article class="panel panel-card">
+      <h3>{{ .title }}</h3>
+      <p>{{ .text }}</p>
+      <a class="panel-card__link" href="{{ .url }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>{{ .link_label }}</a>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="panel-grid">
+  <article class="panel">
+    <h2>{{ .Params.extra_profiles_title }}</h2>
+    <ul class="detail-list">
+      {{ range .Params.extra_profiles }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </article>
+  <article class="panel">
+    <h2>{{ .Params.note_title }}</h2>
+    <p>{{ .Params.note_text }}</p>
+  </article>
+</section>
+{{ end }}

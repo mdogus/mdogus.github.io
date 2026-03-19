@@ -1,0 +1,31 @@
+---
+title: "Home"
+eyebrow: "Academic Personal Website"
+home_title: "Ad Soyad"
+subtitle: "Academic title | Department / Institution"
+lede: "This site is designed as a minimal but distinctive academic home for presenting research, publications, and scholarly updates in a calm and professional setting."
+tags:
+  - "Research area 1"
+  - "Research area 2"
+  - "Interdisciplinary collaboration"
+focus:
+  eyebrow: "Academic Focus"
+  title: "Current Work Frame"
+  text: "Use this space as an editorial note for an active research theme, a project in progress, or an article or book currently under development."
+action_cards:
+  - title: "Biography"
+    text: "Presents academic background, institutional affiliation, and research interests in a structured frame."
+    link_label: "Open bio page"
+    url: "/bio/"
+  - title: "Publications"
+    text: "Articles, books, conference papers, and theses are managed through structured data."
+    link_label: "Go to publications"
+    url: "/publications/"
+  - title: "Contact"
+    text: "Institutional email and academic profiles are gathered in one professional layer."
+    link_label: "Open contact details"
+    url: "/contact/"
+selected_work_eyebrow: "Selected Work"
+selected_work_title: "Featured Publications"
+selected_work_text: "This section is generated automatically from the record IDs listed in `data/featured-publications.json`, keeping your editorial selection independent from Zotero exports."
+---

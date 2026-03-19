@@ -1,0 +1,94 @@
+baseURL = "https://mdogus.github.io/"
+title = "Ad Soyad"
+defaultContentLanguage = "tr"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  author = "Ad Soyad"
+  email = "ad.soyad@kurum.edu.tr"
+  role_tr = "Akademik unvan | Bölüm / Kurum"
+  role_en = "Academic title | Department / Institution"
+  description_tr = "Akademik içeriklerini düşük bakım maliyetiyle yöneten kişisel web sitesi."
+  description_en = "Academic personal website with a low-maintenance publishing workflow."
+  [[params.social]]
+    label = "GitHub"
+    icon = "github"
+    url = "https://github.com/mdogus"
+  [[params.social]]
+    label = "ORCID"
+    icon = "orcid"
+    url = "https://orcid.org/0000-0000-0000-0000"
+  [[params.social]]
+    label = "Google Scholar"
+    icon = "scholar"
+    url = "https://scholar.google.com/"
+  [[params.social]]
+    label = "Email"
+    icon = "mail"
+    url = "mailto:ad.soyad@kurum.edu.tr"
+
+[languages]
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr-TR"
+    weight = 1
+    title = "Ad Soyad"
+    [languages.tr.params]
+      footer_eyebrow = "Akademik Kişisel Site"
+      footer_meta = "Akademik unvan | Bölüm / Kurum"
+    [[languages.tr.menu.main]]
+      identifier = "home"
+      name = "Ana Sayfa"
+      pageRef = "/"
+      weight = 10
+    [[languages.tr.menu.main]]
+      identifier = "bio"
+      name = "Bio"
+      pageRef = "/bio"
+      weight = 20
+    [[languages.tr.menu.main]]
+      identifier = "publications"
+      name = "Yayınlar"
+      pageRef = "/publications"
+      weight = 30
+    [[languages.tr.menu.main]]
+      identifier = "contact"
+      name = "İletişim"
+      pageRef = "/contact"
+      weight = 40
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-US"
+    weight = 2
+    title = "Ad Soyad"
+    [languages.en.params]
+      footer_eyebrow = "Academic Personal Site"
+      footer_meta = "Academic title | Department / Institution"
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "Home"
+      pageRef = "/"
+      weight = 10
+    [[languages.en.menu.main]]
+      identifier = "bio"
+      name = "Bio"
+      pageRef = "/bio"
+      weight = 20
+    [[languages.en.menu.main]]
+      identifier = "publications"
+      name = "Publications"
+      pageRef = "/publications"
+      weight = 30
+    [[languages.en.menu.main]]
+      identifier = "contact"
+      name = "Contact"
+      pageRef = "/contact"
+      weight = 40

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="inner-page" data-page-key="notFound" data-path-tr="/404.html" data-path-en="/en/404.html">
+  <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
+  {{ partial "header.html" . }}
+  <main id="main">
+    <section class="page-hero page-hero--narrow">
+      <div class="page-hero__inner">
+        <p class="page-hero__eyebrow">404</p>
+        <h1>{{ i18n "not_found_title" }}</h1>
+        <p class="page-hero__lede">{{ i18n "not_found_lede" }}</p>
+        <div class="button-row">
+          <a class="button-link" href="{{ "/" | relLangURL }}">{{ i18n "back_home" }}</a>
+          <a class="button-link button-link--secondary" href="{{ "/publications/" | relLangURL }}">{{ i18n "open_publications" }}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  {{ partial "footer.html" . }}
+  <script src="{{ "js/site-language.js" | relURL }}" defer></script>
+</body>
+</html>

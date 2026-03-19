@@ -1,0 +1,47 @@
+[skip_to_content]
+other = "Ana içeriğe geç"
+
+[language_switcher]
+other = "Dil"
+
+[footer_navigation]
+other = "Alt gezinme"
+
+[footer_profiles]
+other = "Akademik profiller"
+
+[all_categories]
+other = "Tüm kategoriler"
+
+[all_years]
+other = "Tüm yıllar"
+
+[category_label]
+other = "Kategori"
+
+[year_label]
+other = "Yıl"
+
+[publication_filters]
+other = "Yayın filtreleri"
+
+[not_found_title]
+other = "Aradığınız sayfa bulunamadı"
+
+[not_found_lede]
+other = "Bağlantı taşınmış, silinmiş veya adres hatalı yazılmış olabilir."
+
+[back_home]
+other = "Ana Sayfaya Dön"
+
+[open_publications]
+other = "Yayınları Aç"
+
+[social_links]
+other = "Sosyal bağlantılar"
+
+[home_navigation]
+other = "Ana sayfa gezinmesi"
+
+[primary_navigation]
+other = "Birincil gezinme"

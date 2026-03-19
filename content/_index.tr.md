@@ -1,0 +1,31 @@
+---
+title: "Ana Sayfa"
+eyebrow: "Akademik Kişisel Web Sitesi"
+home_title: "Ad Soyad"
+subtitle: "Akademik unvan | Bölüm / Kurum"
+lede: "Araştırmalarımı, yayınlarımı ve akademik duyurularımı sade ama karakterli bir dijital vitrin içinde sunmak için tasarlanmış bu kişisel sitede; temel uzmanlık alanlarımı, seçili çalışmalarımı ve iletişim kanallarımı bir arada bulabilirsiniz."
+tags:
+  - "Araştırma alanı 1"
+  - "Araştırma alanı 2"
+  - "Disiplinlerarası iş birliği"
+focus:
+  eyebrow: "Akademik Odak"
+  title: "Güncel Çalışma Çerçevesi"
+  text: "Bu alanı güncel araştırma temanızı, yürüttüğünüz projeyi veya hazırlık aşamasındaki bir makale ya da kitabı kısa bir editoryal not olarak sunmak için kullanabilirsiniz."
+action_cards:
+  - title: "Biyografi"
+    text: "Akademik geçmiş, kurum bilgisi ve araştırma ilgi alanlarını derli toplu bir çerçevede sunar."
+    link_label: "Bio sayfasını aç"
+    url: "/bio/"
+  - title: "Yayınlar"
+    text: "Makaleler, kitaplar, bildiriler ve tezler veri odaklı biçimde yönetilir."
+    link_label: "Yayınlara git"
+    url: "/publications/"
+  - title: "İletişim"
+    text: "Kurumsal e-posta ve akademik profiller tek bir profesyonel iletişim katmanında toplanır."
+    link_label: "İletişim bilgilerini aç"
+    url: "/contact/"
+selected_work_eyebrow: "Seçili Çalışmalar"
+selected_work_title: "Öne Çıkan Yayınlar"
+selected_work_text: "Bu bölüm `data/featured-publications.json` dosyasındaki kayıt kimliklerine göre otomatik üretilir ve Zotero dışa aktarımlarından bağımsız olarak seçili yayın vitrininizi korur."
+---

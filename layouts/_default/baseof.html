@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="{{ if .IsHome }}home-page{{ else }}inner-page{{ end }}" data-page-key="{{ if .IsHome }}home{{ else if eq .Section "bio" }}bio{{ else if eq .Section "publications" }}publications{{ else if eq .Section "contact" }}contact{{ else if eq .Kind "404" }}notFound{{ else }}page{{ end }}" data-path-tr="{{ partial "lang-path.html" (dict "page" . "lang" "tr") }}" data-path-en="{{ partial "lang-path.html" (dict "page" . "lang" "en") }}">
+  <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
+  {{ partial "header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <script src="{{ "js/site-language.js" | relURL }}" defer></script>
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

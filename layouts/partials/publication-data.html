@@ -1,0 +1,9 @@
+{{- $all := slice -}}
+{{- $sources := slice (index site.Data "pub-articles") (index site.Data "pub-books") (index site.Data "pub-conferences") (index site.Data "pub-theses") -}}
+{{- range $sources -}}
+  {{- range . -}}
+    {{- $all = $all | append . -}}
+  {{- end -}}
+{{- end -}}
+<script id="publications-data" type="application/json">{{ $all | jsonify }}</script>
+<script id="featured-publications-data" type="application/json">{{ (index site.Data "featured-publications") | jsonify }}</script>

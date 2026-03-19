@@ -1,0 +1,63 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="page-hero__meta">{{ .Params.meta }}</p>
+    <p class="page-hero__lede">{{ .Params.lede }}</p>
+  </div>
+</section>
+
+<section class="bio-layout">
+  <div class="bio-layout__main">
+    <article class="panel prose">
+      {{ .Content }}
+    </article>
+
+    <article class="panel">
+      <h2>{{ .Params.interests_title }}</h2>
+      <ul class="pill-list" role="list">
+        {{ range .Params.interests }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </article>
+
+    <article class="panel">
+      <h2>{{ .Params.education_title }}</h2>
+      <ul class="timeline" role="list">
+        {{ range .Params.education }}
+        <li>
+          <span class="timeline__label">{{ .level }}</span>
+          <strong>{{ .institution }}</strong>
+          <p>{{ .program }}</p>
+        </li>
+        {{ end }}
+      </ul>
+    </article>
+
+    <article class="panel">
+      <h2>{{ .Params.highlights_title }}</h2>
+      <ul class="detail-list">
+        {{ range .Params.highlights }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </article>
+  </div>
+
+  <aside class="panel bio-layout__side">
+    <h2>{{ .Params.summary_title }}</h2>
+    <dl class="summary-list">
+      {{ range .Params.summary }}
+      <div>
+        <dt>{{ .label }}</dt>
+        <dd>{{ .value }}</dd>
+      </div>
+      {{ end }}
+    </dl>
+    <p class="page-note">{{ .Params.cv_note }}</p>
+    <a class="button-link button-link--disabled" href="#" aria-disabled="true">{{ .Params.cv_label }}</a>
+  </aside>
+</section>
+{{ end }}
