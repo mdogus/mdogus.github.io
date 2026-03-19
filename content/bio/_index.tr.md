@@ -1,6 +1,6 @@
 ---
 title: "Akademik Biyografi"
-eyebrow: "Bio"
+eyebrow: "Hakkında"
 meta: "Dr. Öğr. Üyesi · Anadolu Üniversitesi Eğitim Fakültesi Özel Eğitim Bölümü"
 lede: "Bu sayfa, akademik kimliğimi, araştırma yönelimimi ve eğitim geçmişimi daha derli toplu bir çerçevede sunmak için hazırlanmıştır."
 interests_title: "Araştırma İlgi Alanları"

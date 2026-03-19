@@ -13,7 +13,7 @@ hero_actions:
   - label: "Yayınlara Git"
     url: "/publications/"
     style: "primary"
-  - label: "Bio Sayfasını Aç"
+  - label: "Hakkında Sayfasını Aç"
     url: "/bio/"
     style: "secondary"
 epigraph:
@@ -26,9 +26,9 @@ focus:
   title: "Güncel Çalışma Çerçevesi"
   text: "Güncel yayın ve bildiri başlıkları; görme yetersizliği, Braille yazı, erişilebilir sınav uygulamaları, web tabanlı değerlendirme ortamları ve yapay zekânın özel eğitim bağlamındaki kullanımları üzerinde yoğunlaştığımı gösteriyor."
 action_cards:
-  - title: "Biyografi"
+  - title: "Hakkında"
     text: "Akademik geçmiş, eğitim bilgileri ve araştırma yönelimimi daha bütünlüklü bir çerçevede sunar."
-    link_label: "Bio sayfasını aç"
+    link_label: "Hakkında sayfasını aç"
     url: "/bio/"
   - title: "Yayınlar"
     text: "Makaleler, kitap bölümleri ve bildiriler veri odaklı bir katalog içinde listelenir."
