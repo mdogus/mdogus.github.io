@@ -26,7 +26,7 @@
 
       <div class="spotlight__social" aria-label="{{ i18n "social_links" }}">
         {{ range .Site.Params.social }}
-        <a class="social-link" href="{{ .url }}" aria-label="{{ .label }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>
+        <a class="social-link" href="{{ .url }}" aria-label="{{ .label }}" data-label="{{ .label }}" title="{{ .label }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>
           {{ partial "icon.html" .icon }}
         </a>
         {{ end }}

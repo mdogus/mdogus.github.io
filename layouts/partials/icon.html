@@ -6,9 +6,15 @@
 {{- else if eq $icon "orcid" -}}
 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-4 4.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm1.6 11.4H6.4V9.5h3.2v8.1Zm8.25-4.05c0 2.5-1.62 4.05-4.13 4.05H10.4V9.5h3.2c2.59 0 4.25 1.52 4.25 4.05Zm-3.98-1.47h-.87v2.95h.87c1.02 0 1.62-.56 1.62-1.48 0-.91-.6-1.47-1.62-1.47Z" fill="currentColor"/></svg>
 {{- else if eq $icon "scholar" -}}
-<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 10 7-10 7L2 10l10-7Zm0 9.67 6.82-4.77L12 3.23 5.18 7.9 12 12.67Zm-4.8 1.58L12 17.36l4.8-3.11L19 17.1 12 21l-7-3.9 2.2-2.85Z" fill="currentColor"/></svg>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 2 8l10 5 8-4v4.25h1.5V8L12 3Zm-5 7.1v2.45c0 2.2 2.24 4.2 5 4.2s5-2 5-4.2V10.1l-5 2.5-5-2.5ZM5 18h14v1.75H5z" fill="currentColor"/></svg>
 {{- else if eq $icon "linkedin" -}}
 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3ZM20 13.02c0-3.46-1.85-5.07-4.33-5.07-2 0-2.9 1.1-3.4 1.88V8.5H8.89c.04.88 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.38 1.9-1.38 1.34 0 1.87 1.02 1.87 2.5V20H20v-6.98Z" fill="currentColor"/></svg>
+{{- else if eq $icon "avesis" -}}
+<span class="icon-mask icon-mask--avesis" aria-hidden="true"></span>
+{{- else if eq $icon "yoksis" -}}
+<span class="icon-mask icon-mask--yoksis" aria-hidden="true"></span>
+{{- else if eq $icon "dergipark" -}}
+<span class="icon-letter" aria-hidden="true">D</span>
 {{- else -}}
 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" fill="currentColor"/></svg>
 {{- end -}}

@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $isTR := eq .Site.Language.Lang "tr" }}
 <section class="page-hero page-hero--narrow">
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
@@ -27,11 +28,24 @@
     </div>
 
     <div class="contact-grid contact-grid--channels">
-      {{ range .Params.contacts }}
+      {{ range .Site.Params.social }}
+      {{ $description := .description_en }}
+      {{ $linkLabel := .link_label_en }}
+      {{ if $isTR }}
+        {{ $description = .description_tr }}
+        {{ $linkLabel = .link_label_tr }}
+      {{ end }}
+      <article class="panel panel-card">
+        <h3>{{ .label }}</h3>
+        <p>{{ $description }}</p>
+        <a class="panel-card__link" href="{{ .url }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>{{ $linkLabel }}</a>
+      </article>
+      {{ end }}
+      {{ with .Params.office }}
       <article class="panel panel-card">
         <h3>{{ .title }}</h3>
         <p>{{ .text }}</p>
-        <a class="panel-card__link" href="{{ .url }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>{{ .link_label }}</a>
+        <a class="panel-card__link" href="{{ .url }}" target="_blank" rel="noopener">{{ .link_label }}</a>
       </article>
       {{ end }}
     </div>

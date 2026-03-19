@@ -1,14 +1,16 @@
 ---
 title: "Home"
-eyebrow: "Academic Personal Website"
-hero_badge: "Hugo powered · GitHub Pages · TR / EN"
+eyebrow: "Accessibility | Assistive Technology | Inclusive Education | Universal Design for Learning (UDL)"
+hero_badge: "Visual Impairment Education"
 home_title: "Mustafa Doğuş"
-subtitle: "Assistant Professor · Department of Special Education, Faculty of Education, Anadolu University"
-lede: "This site is designed as a calm and low-maintenance academic home for presenting my work on special education, visual impairment, Braille literacy, accessibility, and assistive technologies."
+subtitle: "Assistant Professor • Department of Special Education, Faculty of Education, Anadolu University"
+lede: "My interdisciplinary research focuses on accessibility, assistive technologies, and inclusive learning, aiming to improve educational access and social participation for people with visual impairments through equitable solutions. On this site, I present my academic work and developed resources within an accessible framework."
 tags:
   - "Special education"
-  - "Visual impairment and Braille"
-  - "Accessibility and assistive technologies"
+  - "Visual impairment education"
+  - "Accessibility"
+  - "Assistive technologies"
+  - "Braille literacy"
 hero_actions:
   - label: "Go to publications"
     url: "/publications/"

@@ -1,14 +1,16 @@
 ---
 title: "Ana Sayfa"
-eyebrow: "Akademik Kişisel Web Sitesi"
-hero_badge: "Hugo tabanlı · GitHub Pages · TR / EN"
+eyebrow: "Erişilebilirlik | Yardımcı Teknoloji | Kapsayıcı Eğitim | Evrensel Öğrenme (UDL)"
+hero_badge: "Görme Engelliler Eğitimi"
 home_title: "Mustafa Doğuş"
-subtitle: "Dr. Öğr. Üyesi · Anadolu Üniversitesi Eğitim Fakültesi Özel Eğitim Bölümü"
-lede: "Bu kişisel site; özel eğitim, görme yetersizliği, Braille okuryazarlığı, erişilebilirlik ve yardımcı teknolojiler eksenindeki akademik çalışmalarımı daha sade, düzenli ve düşük bakım gerektiren bir dijital yapı içinde sunmak için tasarlandı."
+subtitle: "Dr. Öğr. Üyesi • Anadolu Üniversitesi Eğitim Fakültesi Özel Eğitim Bölümü"
+lede: "Görme engelli bireyler için eğitime erişimi artırmak, sosyal katılımı güçlendirmek ve eşitlikçi çözümler geliştirmek amacıyla erişilebilirlik, yardımcı teknolojiler ve kapsayıcı öğrenme üzerine disiplinlerarası araştırmalar yürütüyorum. Bu sitede, yürüttüğüm akademik çalışmaları ve hazırladığım kaynakları erişilebilir bir yapıda sunuyorum."
 tags:
   - "Özel eğitim"
-  - "Görme yetersizliği ve Braille"
-  - "Erişilebilirlik ve yardımcı teknolojiler"
+  - "Görme engelliler eğitimi"
+  - "Erişilebilirlik"
+  - "Yardımcı teknolojiler"
+  - "Braille okuma-yazma"
 hero_actions:
   - label: "Yayınlara Git"
     url: "/publications/"

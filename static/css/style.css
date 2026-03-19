@@ -318,6 +318,7 @@ html[data-theme="light"] .theme-toggle__moon {
   position: relative;
   z-index: 1;
   max-width: 780px;
+  margin-inline: auto;
   padding: 4.2rem 1.5rem 5.6rem;
   text-align: center;
 }
@@ -374,7 +375,7 @@ html[data-theme="light"] .theme-toggle__moon {
 }
 
 .spotlight__title {
-  font-size: clamp(2.85rem, 7vw, 5.8rem);
+  font-size: clamp(2.45rem, 6vw, 5.1rem);
   font-weight: 800;
 }
 
@@ -445,6 +446,7 @@ html[data-theme="light"] .theme-toggle__moon {
 }
 
 .social-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -462,9 +464,80 @@ html[data-theme="light"] .theme-toggle__moon {
   color: var(--hero-text);
 }
 
+.social-link::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.55rem);
+  transform: translateX(-50%) translateY(0.25rem);
+  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(12, 20, 31, 0.9);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.social-link:hover::after,
+.social-link:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 .social-link svg {
   width: 1.2rem;
   height: 1.2rem;
+}
+
+.social-link .icon-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.social-link .icon-mask {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.social-link .icon-mask--avesis {
+  width: 1.8rem;
+  height: 1.2rem;
+  mask-image: url("/images/avesis.svg");
+  mask-position: center;
+  mask-size: 100% auto;
+  -webkit-mask-image: url("/images/avesis.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100% auto;
+}
+
+.social-link .icon-mask--yoksis {
+  width: 1.75rem;
+  height: 1.2rem;
+  mask-image: url("/images/yoksis.svg");
+  mask-position: center;
+  mask-size: 100% auto;
+  -webkit-mask-image: url("/images/yoksis.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100% auto;
 }
 
 .spotlight__nav {
