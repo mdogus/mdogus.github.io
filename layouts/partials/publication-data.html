@@ -5,5 +5,7 @@
     {{- $all = $all | append . -}}
   {{- end -}}
 {{- end -}}
-<script id="publications-data" type="application/json">{{ $all | jsonify }}</script>
-<script id="featured-publications-data" type="application/json">{{ (index site.Data "featured-publications") | jsonify }}</script>
+<script>
+window.__PUBLICATIONS_DATA__ = {{ $all | jsonify | safeJS }};
+window.__FEATURED_PUBLICATIONS_DATA__ = {{ (index site.Data "featured-publications") | jsonify | safeJS }};
+</script>

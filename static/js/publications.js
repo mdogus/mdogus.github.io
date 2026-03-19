@@ -78,6 +78,14 @@
   });
 
   function readScriptJson(id) {
+    if (id === "publications-data" && Array.isArray(window.__PUBLICATIONS_DATA__)) {
+      return window.__PUBLICATIONS_DATA__;
+    }
+
+    if (id === "featured-publications-data" && Array.isArray(window.__FEATURED_PUBLICATIONS_DATA__)) {
+      return window.__FEATURED_PUBLICATIONS_DATA__;
+    }
+
     const source = document.getElementById(id);
 
     if (!source) {
