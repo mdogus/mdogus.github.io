@@ -1,8 +1,7 @@
+public/
+resources/_gen/
+.hugo_build.lock
 _site/
 .quarto/
-.sass-cache/
 .DS_Store
 Thumbs.db
-
-/.quarto/
-**/*.quarto_ipynb

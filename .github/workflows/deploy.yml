@@ -1,4 +1,4 @@
-name: Deploy Quarto site to GitHub Pages
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
@@ -14,6 +14,10 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,16 +28,18 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.147.2"
 
-      - name: Render site
-        run: quarto render
+      - name: Build site
+        run: hugo --minify
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: ./public
 
   deploy:
     needs: build
