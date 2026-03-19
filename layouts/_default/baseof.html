@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.LanguageCode }}">
+<html lang="{{ .Site.Language.LanguageCode }}" data-theme="dark">
 <head>
   {{ partial "head.html" . }}
 </head>
@@ -11,6 +11,7 @@
   </main>
   {{ partial "footer.html" . }}
   <script src="{{ "js/site-language.js" | relURL }}" defer></script>
+  <script src="{{ "js/site-theme.js" | relURL }}" defer></script>
   {{ block "scripts" . }}{{ end }}
 </body>
 </html>

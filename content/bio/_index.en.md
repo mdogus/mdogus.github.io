@@ -26,7 +26,7 @@ highlights:
   - "Editorial role, committee membership, or coordination duty"
   - "Research group, center, or network for collaboration"
 summary_title: "Summary"
-summary:
+profile_summary:
   - label: "Institution"
     value: "University / research institution"
   - label: "Department"

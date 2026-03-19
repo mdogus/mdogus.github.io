@@ -26,7 +26,7 @@ highlights:
   - "Editörlük, kurul üyeliği veya koordinasyon görevi"
   - "İş birliği yapılan araştırma grubu, merkez veya ağ"
 summary_title: "Özet"
-summary:
+profile_summary:
   - label: "Kurum"
     value: "Üniversite / araştırma kurumu"
   - label: "Bölüm"

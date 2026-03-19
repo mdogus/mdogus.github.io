@@ -1,39 +1,69 @@
 {{ define "main" }}
 <section class="spotlight">
-  <div class="spotlight__inner">
-    <p class="spotlight__eyebrow">{{ .Params.eyebrow }}</p>
-    <h1 class="spotlight__title">{{ .Params.home_title | default .Site.Title }}</h1>
-    <p class="spotlight__subtitle">{{ .Params.subtitle }}</p>
-    <p class="spotlight__lede">{{ .Params.lede }}</p>
-
-    <ul class="spotlight__tags" role="list">
-      {{ range .Params.tags }}
-      <li>{{ . }}</li>
+  <div class="spotlight__shell">
+    <div class="spotlight__inner">
+      {{ with .Params.hero_badge }}
+      <p class="spotlight__badge">{{ . }}</p>
       {{ end }}
-    </ul>
+      <p class="spotlight__eyebrow">{{ .Params.eyebrow }}</p>
+      <h1 class="spotlight__title">{{ .Params.home_title | default .Site.Title }}</h1>
+      <p class="spotlight__subtitle">{{ .Params.subtitle }}</p>
+      <p class="spotlight__lede">{{ .Params.lede }}</p>
 
-    <div class="spotlight__social" aria-label="{{ i18n "social_links" }}">
-      {{ range .Site.Params.social }}
-      <a class="social-link" href="{{ .url }}" aria-label="{{ .label }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>
-        {{ partial "icon.html" .icon }}
-      </a>
+      <ul class="spotlight__tags" role="list">
+        {{ range .Params.tags }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+
+      {{ with .Params.hero_actions }}
+      <div class="button-row spotlight__actions">
+        {{ range . }}
+        <a class="button-link{{ if eq .style "secondary" }} button-link--secondary{{ end }}" href="{{ .url | relLangURL }}">{{ .label }}</a>
+        {{ end }}
+      </div>
       {{ end }}
+
+      <div class="spotlight__social" aria-label="{{ i18n "social_links" }}">
+        {{ range .Site.Params.social }}
+        <a class="social-link" href="{{ .url }}" aria-label="{{ .label }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>
+          {{ partial "icon.html" .icon }}
+        </a>
+        {{ end }}
+      </div>
+
+      <nav class="spotlight__nav" aria-label="{{ i18n "home_navigation" }}">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
     </div>
-
-    <nav class="spotlight__nav" aria-label="{{ i18n "home_navigation" }}">
-      {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
   </div>
 </section>
 
+{{ with .Params.epigraph }}
+<section class="epigraph">
+  <div class="epigraph__card">
+    <p class="epigraph__eyebrow">{{ .eyebrow }}</p>
+    <blockquote>
+      <p class="epigraph__text">{{ .text }}</p>
+      {{ with .attribution }}
+      <footer>{{ . }}</footer>
+      {{ end }}
+    </blockquote>
+    {{ with .context }}
+    <p class="epigraph__context">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 <section class="home-grid">
-  <div class="panel">
+  <article class="panel panel--focus">
     <p class="panel__eyebrow">{{ .Params.focus.eyebrow }}</p>
     <h2>{{ .Params.focus.title }}</h2>
     <p>{{ .Params.focus.text }}</p>
-  </div>
+  </article>
 
   <div class="panel-grid">
     {{ range .Params.action_cards }}

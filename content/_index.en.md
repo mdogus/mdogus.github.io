@@ -1,6 +1,7 @@
 ---
 title: "Home"
 eyebrow: "Academic Personal Website"
+hero_badge: "Hugo powered · GitHub Pages · TR / EN"
 home_title: "Ad Soyad"
 subtitle: "Academic title | Department / Institution"
 lede: "This site is designed as a minimal but distinctive academic home for presenting research, publications, and scholarly updates in a calm and professional setting."
@@ -8,6 +9,18 @@ tags:
   - "Research area 1"
   - "Research area 2"
   - "Interdisciplinary collaboration"
+hero_actions:
+  - label: "Go to publications"
+    url: "/publications/"
+    style: "primary"
+  - label: "Open bio page"
+    url: "/bio/"
+    style: "secondary"
+epigraph:
+  eyebrow: "Research Note"
+  text: "In an era overflowing with digital tools, the quality of academic work is still shaped by judgment, direction, and conceptual clarity."
+  attribution: "Sample editorial statement for your research profile"
+  context: "Use this area for a short research statement, a compact manifesto, or a current announcement. It gives the homepage a stronger editorial opening."
 focus:
   eyebrow: "Academic Focus"
   title: "Current Work Frame"

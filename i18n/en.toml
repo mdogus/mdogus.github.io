@@ -45,3 +45,6 @@ other = "Home navigation"
 
 [primary_navigation]
 other = "Primary navigation"
+
+[theme_toggle]
+other = "Toggle theme"

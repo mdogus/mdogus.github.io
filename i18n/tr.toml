@@ -45,3 +45,6 @@ other = "Ana sayfa gezinmesi"
 
 [primary_navigation]
 other = "Birincil gezinme"
+
+[theme_toggle]
+other = "Temayı değiştir"

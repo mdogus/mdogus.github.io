@@ -3,9 +3,12 @@
 
 {{ if .IsHome }}
 <div class="site-utility">
-  <div class="language-switcher" aria-label="{{ i18n "language_switcher" }}">
-    <a class="language-switcher__link{{ if eq .Site.Language.Lang "tr" }} is-active{{ end }}" href="{{ $trPath }}" hreflang="tr" data-lang="tr">TR</a>
-    <a class="language-switcher__link{{ if eq .Site.Language.Lang "en" }} is-active{{ end }}" href="{{ $enPath }}" hreflang="en" data-lang="en">EN</a>
+  <div class="site-utility__actions">
+    {{ partial "theme-toggle.html" . }}
+    <div class="language-switcher" aria-label="{{ i18n "language_switcher" }}">
+      <a class="language-switcher__link{{ if eq .Site.Language.Lang "tr" }} is-active{{ end }}" href="{{ $trPath }}" hreflang="tr" data-lang="tr">TR</a>
+      <a class="language-switcher__link{{ if eq .Site.Language.Lang "en" }} is-active{{ end }}" href="{{ $enPath }}" hreflang="en" data-lang="en">EN</a>
+    </div>
   </div>
 </div>
 {{ else }}
@@ -17,9 +20,12 @@
       <a class="site-nav__link{{ if $current := $.IsMenuCurrent "main" . }} is-active{{ else if $.HasMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
     </nav>
-    <div class="language-switcher" aria-label="{{ i18n "language_switcher" }}">
-      <a class="language-switcher__link{{ if eq .Site.Language.Lang "tr" }} is-active{{ end }}" href="{{ $trPath }}" hreflang="tr" data-lang="tr">TR</a>
-      <a class="language-switcher__link{{ if eq .Site.Language.Lang "en" }} is-active{{ end }}" href="{{ $enPath }}" hreflang="en" data-lang="en">EN</a>
+    <div class="site-header__tools">
+      {{ partial "theme-toggle.html" . }}
+      <div class="language-switcher" aria-label="{{ i18n "language_switcher" }}">
+        <a class="language-switcher__link{{ if eq .Site.Language.Lang "tr" }} is-active{{ end }}" href="{{ $trPath }}" hreflang="tr" data-lang="tr">TR</a>
+        <a class="language-switcher__link{{ if eq .Site.Language.Lang "en" }} is-active{{ end }}" href="{{ $enPath }}" hreflang="en" data-lang="en">EN</a>
+      </div>
     </div>
   </div>
 </header>

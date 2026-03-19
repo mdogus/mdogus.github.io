@@ -1,6 +1,7 @@
 ---
 title: "Ana Sayfa"
 eyebrow: "Akademik Kişisel Web Sitesi"
+hero_badge: "Hugo tabanlı · GitHub Pages · TR / EN"
 home_title: "Ad Soyad"
 subtitle: "Akademik unvan | Bölüm / Kurum"
 lede: "Araştırmalarımı, yayınlarımı ve akademik duyurularımı sade ama karakterli bir dijital vitrin içinde sunmak için tasarlanmış bu kişisel sitede; temel uzmanlık alanlarımı, seçili çalışmalarımı ve iletişim kanallarımı bir arada bulabilirsiniz."
@@ -8,6 +9,18 @@ tags:
   - "Araştırma alanı 1"
   - "Araştırma alanı 2"
   - "Disiplinlerarası iş birliği"
+hero_actions:
+  - label: "Yayınlara Git"
+    url: "/publications/"
+    style: "primary"
+  - label: "Bio Sayfasını Aç"
+    url: "/bio/"
+    style: "secondary"
+epigraph:
+  eyebrow: "Araştırma Notu"
+  text: "Dijital araçların çoğaldığı bir çağda, akademik üretimin kalitesini belirleyen şey hâlâ seçicilik, yön tayini ve kavramsal açıklıktır."
+  attribution: "Kişisel araştırma yaklaşımı için örnek editoryal giriş"
+  context: "Bu alanı kısa bir akademik manifesto, araştırma cümlesi ya da dönemsel duyuru için kullanabilirsiniz. Ana sayfaya daha güçlü bir giriş ritmi kazandırır."
 focus:
   eyebrow: "Akademik Odak"
   title: "Güncel Çalışma Çerçevesi"
