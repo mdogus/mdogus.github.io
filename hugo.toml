@@ -1,5 +1,5 @@
 baseURL = "https://mdogus.github.io/"
-title = "Ad Soyad"
+title = "Mustafa Doğuş"
 defaultContentLanguage = "tr"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
@@ -11,12 +11,12 @@ disableKinds = ["taxonomy", "term", "RSS"]
       unsafe = true
 
 [params]
-  author = "Ad Soyad"
-  email = "ad.soyad@kurum.edu.tr"
-  role_tr = "Akademik unvan | Bölüm / Kurum"
-  role_en = "Academic title | Department / Institution"
-  description_tr = "Akademik içeriklerini düşük bakım maliyetiyle yöneten kişisel web sitesi."
-  description_en = "Academic personal website with a low-maintenance publishing workflow."
+  author = "Mustafa Doğuş"
+  email = "mustafadogus@anadolu.edu.tr"
+  role_tr = "Dr. Öğr. Üyesi · Anadolu Üniversitesi Eğitim Fakültesi Özel Eğitim Bölümü"
+  role_en = "Assistant Professor · Department of Special Education, Faculty of Education, Anadolu University"
+  description_tr = "Özel eğitim, görme yetersizliği, Braille okuryazarlığı, erişilebilirlik ve yardımcı teknolojiler üzerine kişisel akademik site."
+  description_en = "Academic site focused on special education, visual impairment, Braille literacy, accessibility, and assistive technologies."
   [[params.social]]
     label = "GitHub"
     icon = "github"
@@ -24,25 +24,25 @@ disableKinds = ["taxonomy", "term", "RSS"]
   [[params.social]]
     label = "ORCID"
     icon = "orcid"
-    url = "https://orcid.org/0000-0000-0000-0000"
+    url = "https://orcid.org/0000-0001-7027-7388"
   [[params.social]]
     label = "Google Scholar"
     icon = "scholar"
-    url = "https://scholar.google.com/"
+    url = "https://scholar.google.com/citations?user=UN4zloehvMYC"
   [[params.social]]
     label = "Email"
     icon = "mail"
-    url = "mailto:ad.soyad@kurum.edu.tr"
+    url = "mailto:mustafadogus@anadolu.edu.tr"
 
 [languages]
   [languages.tr]
     languageName = "Türkçe"
     languageCode = "tr-TR"
     weight = 1
-    title = "Ad Soyad"
+    title = "Mustafa Doğuş"
     [languages.tr.params]
       footer_eyebrow = "Akademik Kişisel Site"
-      footer_meta = "Akademik unvan | Bölüm / Kurum"
+      footer_meta = "Dr. Öğr. Üyesi · Anadolu Üniversitesi Eğitim Fakültesi Özel Eğitim Bölümü"
     [[languages.tr.menu.main]]
       identifier = "home"
       name = "Ana Sayfa"
@@ -68,10 +68,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
     languageName = "English"
     languageCode = "en-US"
     weight = 2
-    title = "Ad Soyad"
+    title = "Mustafa Doğuş"
     [languages.en.params]
       footer_eyebrow = "Academic Personal Site"
-      footer_meta = "Academic title | Department / Institution"
+      footer_meta = "Assistant Professor · Department of Special Education, Faculty of Education, Anadolu University"
     [[languages.en.menu.main]]
       identifier = "home"
       name = "Home"
