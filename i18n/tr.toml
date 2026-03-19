@@ -48,3 +48,18 @@ other = "Birincil gezinme"
 
 [theme_toggle]
 other = "Temayı değiştir"
+
+[publication_total_records]
+other = "Toplam kayıt"
+
+[publication_featured_count]
+other = "Öne çıkan"
+
+[publication_articles_count]
+other = "Makale"
+
+[publication_books_count]
+other = "Kitap"
+
+[publication_other_count]
+other = "Bildiri + tez"

@@ -48,3 +48,18 @@ other = "Primary navigation"
 
 [theme_toggle]
 other = "Toggle theme"
+
+[publication_total_records]
+other = "Total records"
+
+[publication_featured_count]
+other = "Featured"
+
+[publication_articles_count]
+other = "Articles"
+
+[publication_books_count]
+other = "Books"
+
+[publication_other_count]
+other = "Papers + theses"

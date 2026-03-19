@@ -1,16 +1,16 @@
 ---
 title: "İletişim ve Akademik Profiller"
 eyebrow: "İletişim"
-meta: "Kurumsal e-posta, araştırma profilleri ve güvenli statik iletişim yaklaşımı"
-lede: "Bu site, backend gerektiren bir iletişim formu yerine güvenli ve düşük bakım maliyetli statik iletişim yapısını benimser. Tercih edilen yöntem, kurumsal e-posta ve akademik profilleri tek bir sayfada toplamaktır."
+meta: "Kurumsal e-posta, araştırma profilleri ve sade iletişim altyapısı"
+lede: "Bu site, backend gerektiren iletişim formları yerine düşük bakım maliyetli ve güvenli bir statik iletişim yaklaşımını benimser. Tercih edilen kanal, kurumsal e-posta ve akademik profillerin tek sayfada açık biçimde sunulmasıdır."
 highlights:
   - title: "Tercih Edilen İletişim"
-    text: "Kurumsal e-posta üzerinden doğrudan iletişim, iş birlikleri, konuşma davetleri ve yayın odaklı yazışmalar için en güvenilir kanaldır."
+    text: "Kurumsal e-posta, iş birlikleri, konuşma davetleri ve yayın odaklı yazışmalar için en güvenilir ilk temas kanalıdır."
   - title: "Statik ve Güvenli"
-    text: "Sunucu taraflı form kurmadan, daha düşük bakım gerektiren ve spam yüzeyini büyütmeyen sade bir iletişim yapısı korunur."
+    text: "Sunucu taraflı form kurmadan daha düşük bakım gerektiren, spam yüzeyini büyütmeyen ve sade kalan bir iletişim yapısı korunur."
 channels_eyebrow: "İletişim Kanalları"
 channels_title: "Doğrudan Bağlantılar"
-channels_text: "E-posta, ORCID, Google Scholar, ResearchGate ve GitHub gibi temel profiller bir bakışta erişilebilir durumdadır."
+channels_text: "E-posta, ORCID, Google Scholar, ResearchGate ve GitHub gibi temel profiller tek bakışta erişilebilir durumdadır."
 contacts:
   - title: "E-posta"
     text: "Kurumsal yazışmalar ve akademik iletişim için birincil kanal."
@@ -32,6 +32,19 @@ contacts:
     text: "Kod, veri, statik site altyapısı ve açık araştırma çıktıları için uygun alan."
     link_label: "GitHub profilini açın"
     url: "https://github.com/mdogus"
+response_eyebrow: "Yazışma Pratiği"
+response_title: "Kısa ve Net İletişim"
+response_text: "İlk mesajlarda konuyu, kurumunuzu ve talebinizin amacını birkaç cümleyle özetlemek, doğru ve hızlı dönüş almayı kolaylaştırır."
+response_points:
+  - "Konuşma, panel veya ders davetlerinde tarih, kurum ve tema bilgisini ekleyin."
+  - "Ortak çalışma önerilerinde araştırma başlığını ve beklenen katkı biçimini kısaca belirtin."
+  - "Yayın veya hakemlik yazışmalarında ilgili dergi, dosya ya da son tarih bilgisini paylaşın."
+topics_title: "Sık Karşılaşılan Konular"
+topics:
+  - "Konuşma ve seminer davetleri"
+  - "Ortak araştırma ve yayın önerileri"
+  - "Proje, danışmanlık ve uzman görüşü talepleri"
+  - "Açık araştırma çıktıları ve dijital materyaller"
 extra_profiles_title: "Ek Akademik Profiller"
 extra_profiles:
   - "Academia.edu"

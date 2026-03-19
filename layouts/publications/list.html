@@ -1,4 +1,11 @@
 {{ define "main" }}
+{{ $articles := index site.Data "pub-articles" }}
+{{ $books := index site.Data "pub-books" }}
+{{ $conferences := index site.Data "pub-conferences" }}
+{{ $theses := index site.Data "pub-theses" }}
+{{ $featured := index site.Data "featured-publications" }}
+{{ $total := add (add (len $articles) (len $books)) (add (len $conferences) (len $theses)) }}
+
 <section class="page-hero">
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
@@ -8,6 +15,29 @@
   </div>
 </section>
 
+<section class="fact-strip publication-stats">
+  <article class="fact-card">
+    <p class="fact-card__label">{{ i18n "publication_total_records" }}</p>
+    <p class="fact-card__value">{{ $total }}</p>
+  </article>
+  <article class="fact-card">
+    <p class="fact-card__label">{{ i18n "publication_featured_count" }}</p>
+    <p class="fact-card__value">{{ len $featured }}</p>
+  </article>
+  <article class="fact-card">
+    <p class="fact-card__label">{{ i18n "publication_articles_count" }}</p>
+    <p class="fact-card__value">{{ len $articles }}</p>
+  </article>
+  <article class="fact-card">
+    <p class="fact-card__label">{{ i18n "publication_books_count" }}</p>
+    <p class="fact-card__value">{{ len $books }}</p>
+  </article>
+  <article class="fact-card">
+    <p class="fact-card__label">{{ i18n "publication_other_count" }}</p>
+    <p class="fact-card__value">{{ add (len $conferences) (len $theses) }}</p>
+  </article>
+</section>
+
 <section class="panel-grid">
   {{ range .Params.highlights }}
   <article class="panel panel-card">
@@ -15,6 +45,16 @@
     <p>{{ .text }}</p>
   </article>
   {{ end }}
+</section>
+
+<section class="content-section">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">{{ .Params.selected_eyebrow }}</p>
+    <h2>{{ .Params.selected_title }}</h2>
+    <p>{{ .Params.selected_text }}</p>
+  </div>
+
+  <div id="featured-publications"></div>
 </section>
 
 <section class="content-section">

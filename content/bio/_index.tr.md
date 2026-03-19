@@ -1,8 +1,8 @@
 ---
 title: "Akademik Biyografi"
 eyebrow: "Bio"
-meta: "Akademik unvan | Bölüm / Kurum"
-lede: "Bu sayfa akademik kimliğinizi, araştırma yaklaşımınızı ve eğitim geçmişinizi dağınık olmayan ama yeterince kapsamlı bir çerçevede sunmak için tasarlanmıştır."
+meta: "Akademik kimlik, araştırma yönelimi ve kurumsal çerçeve"
+lede: "Bu sayfa; akademik profilinizi, çalışma alanlarınızı ve araştırma yöneliminizi sade ama güçlü bir editoryal yapı içinde sunmak için tasarlanmıştır."
 interests_title: "Araştırma İlgi Alanları"
 interests:
   - "Araştırma alanı / tema 1"
@@ -25,7 +25,7 @@ highlights:
   - "İsteğe bağlı ödül, burs veya araştırma desteği"
   - "Editörlük, kurul üyeliği veya koordinasyon görevi"
   - "İş birliği yapılan araştırma grubu, merkez veya ağ"
-summary_title: "Özet"
+summary_title: "Akademik Özet"
 profile_summary:
   - label: "Kurum"
     value: "Üniversite / araştırma kurumu"
@@ -35,9 +35,17 @@ profile_summary:
     value: "Akademik alan, alt alan veya tematik uzmanlık"
   - label: "Diller"
     value: "Türkçe, İngilizce, diğerleri"
-cv_note: "CV PDF alanı hazırdır. Dosyanızı `static/files/cv.pdf` yoluna ekleyip bağlantıyı etkinleştirebilirsiniz."
-cv_label: "CV PDF eklenecek"
+focus_eyebrow: "Araştırma Yönelimi"
+focus_title: "Güncel Akademik Çerçeve"
+focus_text: "Bu alan, mevcut araştırma gündeminizi iki ya da üç cümleyle özetlemek için idealdir. Temel probleminizi, hangi yöntemlerle çalıştığınızı ve hangi uygulama bağlamlarında üretim yaptığınızı burada görünür kılabilirsiniz."
+collaboration_eyebrow: "İş Birliği"
+collaboration_title: "Ortak Çalışma ve Davetler"
+collaboration_text: "Konuşma davetleri, panel katılımları, ortak yayın, danışmanlık ya da proje iş birlikleri gibi profesyonel temaslar için bu bölüm kısa bir yönlendirme alanı olarak kullanılabilir."
+cv_title: "CV ve Kısa Profil"
+cv_note: "CV alanı hazırdır. Dosyanızı `static/files/cv.pdf` yoluna eklediğinizde bu bağlantı doğrudan etkinleşecek biçimde güncellenebilir."
+cv_label: "CV PDF yakında eklenecek"
+cv_url: ""
 ---
-[Ad Soyad], [kurum/bölüm] bünyesinde [akademik unvan] olarak çalışmaktadır. Araştırmaları [temel alanlar], [yöntemler] ve [uygulama bağlamları] üzerinde yoğunlaşır. Bu bölüm iki ya da üç paragrafla hem akademik kimliğinizi hem de araştırma yaklaşımınızı özetleyecek biçimde düzenlenebilir.
+[Ad Soyad], [kurum / bölüm] bünyesinde [akademik unvan] olarak çalışmaktadır. Araştırmaları [temel alanlar], [yöntemler] ve [uygulama bağlamları] üzerinde yoğunlaşır. Bu bölüm, ziyaretçiye hem akademik kimliğinizi hem de çalışma yönünüzü birkaç paragrafta açık biçimde sunmak için kullanılabilir.
 
-Ulusal ve uluslararası yayınlar, disiplinlerarası iş birlikleri ve öğretim faaliyetleri için daha ayrıntılı bir biyografi gerektiğinde bu sayfa rahatlıkla genişletilebilir.
+Sayfa yapısı; kurumsal biyografi, konferans konuşmacı profili, proje sayfası ya da uluslararası başvuru dosyalarında kullanılabilecek daha uzun bir versiyona da kolayca genişleyebilir. Böylece tek bir biyografi metni, farklı bağlamlar için yeniden üretilebilir bir çekirdek haline gelir.

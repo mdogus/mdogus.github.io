@@ -1,8 +1,8 @@
 ---
 title: "Academic Biography"
 eyebrow: "Bio"
-meta: "Academic title | Department / Institution"
-lede: "This page is designed to present your academic identity, research approach, and educational background in a structured but approachable way."
+meta: "Academic identity, research direction, and institutional frame"
+lede: "This page is designed to present your scholarly profile, fields of work, and research direction within a clear but editorial academic format."
 interests_title: "Research Interests"
 interests:
   - "Research area / theme 1"
@@ -25,7 +25,7 @@ highlights:
   - "Optional award, grant, or research support"
   - "Editorial role, committee membership, or coordination duty"
   - "Research group, center, or network for collaboration"
-summary_title: "Summary"
+summary_title: "Academic Snapshot"
 profile_summary:
   - label: "Institution"
     value: "University / research institution"
@@ -35,9 +35,17 @@ profile_summary:
     value: "Academic field, subfield, or thematic specialization"
   - label: "Languages"
     value: "Turkish, English, others"
-cv_note: "The CV PDF area is ready. Add your file to `static/files/cv.pdf` and enable the link."
+focus_eyebrow: "Research Direction"
+focus_title: "Current Scholarly Frame"
+focus_text: "This area works well as a compact overview of your current research agenda. It can briefly clarify your core problem, methodological approach, and the applied settings in which your work is situated."
+collaboration_eyebrow: "Collaboration"
+collaboration_title: "Joint Work and Invitations"
+collaboration_text: "Talk invitations, panel participation, co-authored work, consulting, and project collaborations can all be framed here as a short professional orientation note."
+cv_title: "CV and Short Profile"
+cv_note: "The CV area is ready. Once you place your file at `static/files/cv.pdf`, this link can be activated directly."
 cv_label: "CV PDF coming soon"
+cv_url: ""
 ---
-[Ad Soyad] works as [academic title] at [institution / department]. Research focuses on [core areas], [methods], and [applied contexts]. This section can be expanded into two or three paragraphs that summarize both your scholarly profile and your research approach.
+[Ad Soyad] works as [academic title] at [institution / department]. Research focuses on [core areas], [methods], and [applied contexts]. This section can be used to introduce both your academic identity and your intellectual direction in two or three concise paragraphs.
 
-If a longer biography is needed for institutional, conference, or international contexts, this page can easily be extended.
+The page structure can also expand into a longer version for institutional bios, conference speaker notes, project pages, or international applications. In that sense, it functions as a reusable core profile rather than a one-off biography.

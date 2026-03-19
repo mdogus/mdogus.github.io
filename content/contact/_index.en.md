@@ -1,11 +1,11 @@
 ---
 title: "Contact and Academic Profiles"
 eyebrow: "Contact"
-meta: "Institutional email, research profiles, and a secure static contact approach"
-lede: "Instead of a backend contact form, this site uses a secure and low-maintenance static contact model. The preferred approach is to keep institutional email and academic profiles together on one clear page."
+meta: "Institutional email, research profiles, and a low-maintenance contact structure"
+lede: "Instead of backend contact forms, this site follows a secure and low-maintenance static contact model. The preferred approach is to keep institutional email and scholarly profiles clearly available on one page."
 highlights:
   - title: "Preferred Contact"
-    text: "Direct institutional email is the most reliable channel for collaborations, invitations, and publication-related correspondence."
+    text: "Institutional email is the most reliable first channel for collaborations, invitations, and publication-related correspondence."
   - title: "Static and Secure"
     text: "The page avoids server-side forms, keeps maintenance low, and does not unnecessarily increase spam exposure."
 channels_eyebrow: "Contact Channels"
@@ -32,6 +32,19 @@ contacts:
     text: "A good home for code, data, static site infrastructure, and open research outputs."
     link_label: "Open GitHub profile"
     url: "https://github.com/mdogus"
+response_eyebrow: "Correspondence Practice"
+response_title: "Short and Clear Outreach"
+response_text: "In first messages, a concise summary of the topic, your institution, and the purpose of your request usually makes it much easier to respond clearly and efficiently."
+response_points:
+  - "For talks, panels, or teaching invitations, include date, institution, and theme."
+  - "For collaboration proposals, briefly state the research topic and expected form of contribution."
+  - "For publication or reviewing requests, share the journal, file, or deadline context."
+topics_title: "Common Topics"
+topics:
+  - "Talk and seminar invitations"
+  - "Research and publication collaborations"
+  - "Projects, consulting, and expert input"
+  - "Open research outputs and digital materials"
 extra_profiles_title: "Additional Academic Profiles"
 extra_profiles:
   - "Academia.edu"
@@ -39,5 +52,5 @@ extra_profiles:
   - "SSRN"
   - "Institutional staff page"
 note_title: "Contact Note"
-note_text: "If you prefer not to display your email address openly, you can show only institutional profile links or protect the address with a minimal obfuscation approach."
+note_text: "If you prefer not to display your email address openly, you can keep only institutional profile links visible or use a lightweight obfuscation approach."
 ---
