@@ -89,9 +89,9 @@ disableKinds = ["taxonomy", "term", "RSS"]
       pageRef = "/"
       weight = 10
     [[languages.tr.menu.main]]
-      identifier = "bio"
+      identifier = "about"
       name = "Hakkında"
-      pageRef = "/bio"
+      pageRef = "/about"
       weight = 20
     [[languages.tr.menu.main]]
       identifier = "publications"
@@ -99,10 +99,25 @@ disableKinds = ["taxonomy", "term", "RSS"]
       pageRef = "/publications"
       weight = 30
     [[languages.tr.menu.main]]
+      identifier = "teaching"
+      name = "Dersler"
+      pageRef = "/teaching"
+      weight = 40
+    [[languages.tr.menu.main]]
+      identifier = "projects"
+      name = "Projeler"
+      pageRef = "/projects"
+      weight = 50
+    [[languages.tr.menu.main]]
+      identifier = "talks"
+      name = "Konuşmalar"
+      pageRef = "/talks"
+      weight = 60
+    [[languages.tr.menu.main]]
       identifier = "contact"
       name = "İletişim"
       pageRef = "/contact"
-      weight = 40
+      weight = 70
 
   [languages.en]
     languageName = "English"
@@ -118,9 +133,9 @@ disableKinds = ["taxonomy", "term", "RSS"]
       pageRef = "/"
       weight = 10
     [[languages.en.menu.main]]
-      identifier = "bio"
-      name = "Bio"
-      pageRef = "/bio"
+      identifier = "about"
+      name = "About"
+      pageRef = "/about"
       weight = 20
     [[languages.en.menu.main]]
       identifier = "publications"
@@ -128,7 +143,22 @@ disableKinds = ["taxonomy", "term", "RSS"]
       pageRef = "/publications"
       weight = 30
     [[languages.en.menu.main]]
+      identifier = "teaching"
+      name = "Teaching"
+      pageRef = "/teaching"
+      weight = 40
+    [[languages.en.menu.main]]
+      identifier = "projects"
+      name = "Projects"
+      pageRef = "/projects"
+      weight = 50
+    [[languages.en.menu.main]]
+      identifier = "talks"
+      name = "Talks"
+      pageRef = "/talks"
+      weight = 60
+    [[languages.en.menu.main]]
       identifier = "contact"
       name = "Contact"
       pageRef = "/contact"
-      weight = 40
+      weight = 70

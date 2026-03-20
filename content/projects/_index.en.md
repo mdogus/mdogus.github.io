@@ -1,0 +1,55 @@
+---
+title: "Projects"
+eyebrow: "Projects"
+meta: "Research, development, and digital outputs"
+lede: "This section is prepared to make research projects, digital productions, and open materials visible through a shared editorial surface."
+summary_facts:
+  - label: "Scope"
+    value: "Research, applied work, digital materials, and collaborations"
+  - label: "Format"
+    value: "Short project summaries, links, and output lists"
+  - label: "Role"
+    value: "The site's production and collaboration surface"
+highlights:
+  - eyebrow: "Purpose"
+    title: "Separating Projects from Publications"
+    text: "While the publications page is record-driven, the projects page can foreground process, outputs, and collaborative context."
+  - eyebrow: "Flexibility"
+    title: "Academic and Digital Production Together"
+    text: "Research projects, software outputs, open educational materials, and AI-supported experiments can coexist within the same architecture."
+main_sections:
+  - eyebrow: "Project Types"
+    title: "What This Section Can Host"
+    text: "The projects area is intended to gather different forms of production within one editorial frame."
+    items:
+      - "Research and applied projects"
+      - "Open digital materials and web-based outputs"
+      - "AI-supported teaching and development experiments"
+      - "Collaborative work across teams or institutions"
+  - eyebrow: "Card Logic"
+    title: "What Each Project Can Show"
+    text: "When content is added, each project can be described through a shared information pattern."
+    items:
+      - "Short project overview"
+      - "Role, collaborators, and timeline"
+      - "Outputs, links, and visual assets"
+      - "Progress state or archive note"
+  - eyebrow: "Scalability"
+    title: "Ready for Future Growth"
+    text: "As more projects are added, the section can later split into featured work and a full project directory."
+    items:
+      - "Featured project surface"
+      - "Full project list"
+      - "Topic clusters or tags"
+side_cards:
+  - eyebrow: "Status"
+    title: "Skeleton in Place"
+    text: "This page is currently being built as a content-ready skeleton so that future projects can be added without rethinking the structure."
+  - eyebrow: "Use"
+    title: "A Collaboration Surface"
+    text: "This area can also help external collaborators, students, and institutional partners quickly understand ongoing lines of production."
+  - eyebrow: "Editorial Note"
+    title: "How the Page Should Feel"
+    text: "This section should remain contextual and selective rather than becoming a flat registry of disconnected items."
+---
+Unlike a publication directory, the projects page is intended to show not only outcomes but also the shape of work in progress. For that reason, its design is deliberately more editorial and narrative.

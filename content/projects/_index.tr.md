@@ -1,0 +1,55 @@
+---
+title: "Projeler"
+eyebrow: "Projects"
+meta: "Araştırma, geliştirme ve dijital çıktıların proje yüzeyi"
+lede: "Bu bölüm, araştırma projelerini, dijital üretimleri ve geliştirilen açık materyalleri ileride aynı çatı altında görünür kılmak için hazırlanmıştır."
+summary_facts:
+  - label: "Kapsam"
+    value: "Araştırma, uygulama, dijital materyal ve ortak üretim"
+  - label: "Biçim"
+    value: "Kısa proje özetleri, bağlantılar ve çıktı listeleri"
+  - label: "Rol"
+    value: "Sitenin üretim ve iş birliği yüzeyi"
+highlights:
+  - eyebrow: "Amaç"
+    title: "Çalışmaları Yayınlardan Ayırmak"
+    text: "Yayınlar sayfası kayıt mantığıyla çalışırken, projeler sayfası süreçleri, çıktıları ve iş birliği bağlamlarını görünür kılacaktır."
+  - eyebrow: "Esneklik"
+    title: "Akademik ve Dijital Üretim Bir Arada"
+    text: "Araştırma projeleri, yazılım/dijital üretimler, açık eğitim materyalleri ve yöntem geliştirme çalışmaları aynı mimari içinde gösterilebilir."
+main_sections:
+  - eyebrow: "Proje Türleri"
+    title: "Bu Bölümde Yer Alabilecek Çalışmalar"
+    text: "Projeler yüzeyi, farklı üretim biçimlerini ortak bir editoryal çerçevede buluşturacak."
+    items:
+      - "Araştırma ve uygulama projeleri"
+      - "Açık dijital materyaller ve web tabanlı çalışmalar"
+      - "Yapay zeka destekli öğretim/geliştirme deneyleri"
+      - "Ortak kurum veya ekip tabanlı çalışmalar"
+  - eyebrow: "Kart Yapısı"
+    title: "Her Projede Görünebilecek Bilgiler"
+    text: "İçerik geldiğinde her proje için tekrar eden bir bilgi şeması kullanılabilir."
+    items:
+      - "Kısa proje özeti"
+      - "Rol, ortaklar ve zaman aralığı"
+      - "Çıktılar, bağlantılar ve görseller"
+      - "İlerleme durumu veya arşiv notu"
+  - eyebrow: "Mimari"
+    title: "Uzun Vadeli Büyüme"
+    text: "İleride proje sayısı arttığında bu bölüm, öne çıkan projeler ve tam proje dizini gibi alt katmanlara ayrılabilir."
+    items:
+      - "Seçili proje alanı"
+      - "Tam proje listesi"
+      - "Etiket veya tema kümeleri"
+side_cards:
+  - eyebrow: "Durum"
+    title: "İskelet Hazır"
+    text: "Bu sayfa şu anda içerik öncesi iskelet olarak kurulmaktadır. Amaç, proje içeriği geldiğinde hızlıca doldurulabilecek bir sistem oluşturmaktır."
+  - eyebrow: "Kullanım"
+    title: "İş Birliği Yüzeyi"
+    text: "Bu alan; araştırma ortaklarına, öğrencilerine ve dış paydaşlara yürütülen üretim hatlarını daha görünür kılmak için de işlev görebilir."
+  - eyebrow: "Editoryal Not"
+    title: "Proje Sayfası Dili"
+    text: "Bu bölüm kayıt listesinden çok bağlam anlatan, kısa ama seçili proje kartlarıyla ilerleyen bir yapıda tutulmalıdır."
+---
+Projeler sayfası, yayın dizininden farklı olarak yalnızca sonuçları değil süreçleri de görünür kılacak bir alan olarak düşünülmektedir. Bu nedenle tasarım dili daha editoryal, açıklayıcı ve seçki mantığına yakın tutulmuştur.

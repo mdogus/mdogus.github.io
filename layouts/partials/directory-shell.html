@@ -1,0 +1,88 @@
+{{ with .Params.summary_facts }}
+<section class="fact-strip">
+  {{ range . }}
+  <article class="fact-card">
+    <p class="fact-card__label">{{ .label }}</p>
+    <p class="fact-card__value">{{ .value }}</p>
+  </article>
+  {{ end }}
+</section>
+{{ end }}
+
+{{ with .Params.highlights }}
+<section class="panel-grid">
+  {{ range . }}
+  <article class="panel panel-card">
+    {{ with .eyebrow }}<p class="panel__eyebrow">{{ . }}</p>{{ end }}
+    <h2>{{ .title }}</h2>
+    <p>{{ .text }}</p>
+  </article>
+  {{ end }}
+</section>
+{{ end }}
+
+<section class="section-shell">
+  <div class="section-shell__main">
+    {{ if .Content }}
+    <article class="panel panel--focus prose">
+      {{ .Content }}
+    </article>
+    {{ end }}
+
+    {{ range .Params.main_sections }}
+    {{ $section := . }}
+    <article class="panel panel-card">
+      {{ with .eyebrow }}<p class="panel__eyebrow">{{ . }}</p>{{ end }}
+      <h2>{{ .title }}</h2>
+      {{ with .text }}<p>{{ . }}</p>{{ end }}
+      {{ with .items }}
+        {{ if eq $section.style "pills" }}
+        <ul class="pill-list pill-list--soft" role="list">
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ else }}
+        <ul class="detail-list detail-list--spacious">
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      {{ end }}
+      {{ with .link_label }}
+      <a class="panel-card__link" href="{{ $section.url | relURL }}">{{ . }}</a>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+  <aside class="section-shell__side">
+    {{ range .Params.side_cards }}
+    {{ $card := . }}
+    <article class="panel panel-card">
+      {{ with .eyebrow }}<p class="panel__eyebrow">{{ . }}</p>{{ end }}
+      <h2>{{ .title }}</h2>
+      {{ with .text }}<p>{{ . }}</p>{{ end }}
+      {{ with .items }}
+        {{ if eq $card.style "pills" }}
+        <ul class="pill-list pill-list--soft" role="list">
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ else }}
+        <ul class="detail-list detail-list--spacious">
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      {{ end }}
+      {{ with .link_label }}
+      <a class="panel-card__link" href="{{ $card.url | relURL }}">{{ . }}</a>
+      {{ end }}
+    </article>
+    {{ end }}
+  </aside>
+</section>

@@ -38,6 +38,9 @@
         {{ end }}
       </nav>
     </div>
+    <div class="spotlight__portrait" aria-hidden="true">
+      <img class="spotlight__portrait-image" src="{{ "images/hero-logo.png" | relURL }}" alt="">
+    </div>
   </div>
 </section>
 
@@ -47,6 +50,9 @@
     <p class="epigraph__eyebrow">{{ .eyebrow }}</p>
     <blockquote>
       <p class="epigraph__text">{{ .text }}</p>
+      {{ with .subtext }}
+      <p class="epigraph__subtext">{{ . }}</p>
+      {{ end }}
       {{ with .attribution }}
       <footer>{{ . }}</footer>
       {{ end }}

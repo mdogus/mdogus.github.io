@@ -49,6 +49,18 @@ other = "Birincil gezinme"
 [theme_toggle]
 other = "Temayı değiştir"
 
+[theme_current_light]
+other = "Geçerli tema açık mod"
+
+[theme_current_dark]
+other = "Geçerli tema koyu mod"
+
+[theme_switch_to_light]
+other = "Açık moda geç"
+
+[theme_switch_to_dark]
+other = "Koyu moda geç"
+
 [publication_total_records]
 other = "Toplam kayıt"
 

@@ -6,14 +6,7 @@
 {{ $featured := index site.Data "featured-publications" }}
 {{ $total := add (add (len $articles) (len $books)) (add (len $conferences) (len $theses)) }}
 
-<section class="page-hero">
-  <div class="page-hero__inner">
-    <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
-    <h1>{{ .Title }}</h1>
-    <p class="page-hero__meta">{{ .Params.meta }}</p>
-    <p class="page-hero__lede">{{ .Params.lede }}</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "page" .) }}
 
 <section class="fact-strip publication-stats">
   <article class="fact-card">

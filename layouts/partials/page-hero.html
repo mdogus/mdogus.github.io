@@ -1,0 +1,10 @@
+{{- $page := .page | default . -}}
+{{- $modifier := .class | default "" -}}
+<section class="page-hero{{ if $modifier }} {{ $modifier }}{{ end }}">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">{{ $page.Params.eyebrow }}</p>
+    <h1>{{ $page.Title }}</h1>
+    <p class="page-hero__meta">{{ $page.Params.meta }}</p>
+    <p class="page-hero__lede">{{ $page.Params.lede }}</p>
+  </div>
+</section>

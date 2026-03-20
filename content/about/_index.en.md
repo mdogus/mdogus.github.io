@@ -1,6 +1,6 @@
 ---
-title: "Academic Biography"
-eyebrow: "Bio"
+title: "About"
+eyebrow: "About"
 meta: "Assistant Professor · Department of Special Education, Faculty of Education, Anadolu University"
 lede: "This page presents my academic profile, research direction, and educational background in a more structured and readable format."
 interests_title: "Research Interests"
@@ -52,4 +52,4 @@ Mustafa Doğuş is an Assistant Professor in the Department of Special Education
 
 Across publications and conference papers, his research consistently examines how accessibility can be designed within both classroom practice and assessment settings. In recent years, this line of work has also expanded toward the relationship between visual impairment and artificial intelligence.
 
-This biography page functions as a compact academic profile that can support institutional introductions, speaker notes, project pages, and other short professional formats.
+This page functions as a compact academic profile that can support institutional introductions, speaker notes, project pages, and other short professional formats.

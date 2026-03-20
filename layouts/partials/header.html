@@ -14,7 +14,10 @@
 {{ else }}
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="site-brand" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
+    <a class="site-brand" href="{{ "/" | relLangURL }}">
+      <img class="site-brand__logo" src="{{ "images/hero-logo.png" | relURL }}" alt="" aria-hidden="true">
+      <span class="site-brand__text">{{ .Site.Title }}</span>
+    </a>
     <nav class="site-nav" aria-label="{{ i18n "primary_navigation" }}">
       {{ range .Site.Menus.main }}
       <a class="site-nav__link{{ if $current := $.IsMenuCurrent "main" . }} is-active{{ else if $.HasMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>

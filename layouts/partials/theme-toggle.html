@@ -1,4 +1,13 @@
-<button class="theme-toggle" type="button" aria-label="{{ i18n "theme_toggle" }}" data-theme-toggle>
+<button
+  class="theme-toggle"
+  type="button"
+  aria-label="{{ i18n "theme_toggle" }}"
+  aria-pressed="false"
+  data-theme-toggle
+  data-theme-label-light="{{ i18n "theme_current_light" }}"
+  data-theme-label-dark="{{ i18n "theme_current_dark" }}"
+  data-theme-action-light="{{ i18n "theme_switch_to_light" }}"
+  data-theme-action-dark="{{ i18n "theme_switch_to_dark" }}">
   <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
     <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" fill="currentColor"/>
   </svg>

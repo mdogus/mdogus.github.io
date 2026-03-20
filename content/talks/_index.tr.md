@@ -1,0 +1,55 @@
+---
+title: "Konuşmalar"
+eyebrow: "Talks"
+meta: "Seminerler, konuşmalar, paneller ve sunum arşivi"
+lede: "Bu bölüm, konuşma başlıklarını, seminer temalarını ve ileride eklenecek sunum arşivini düzenli bir görünüm altında toplamak için hazırlanmıştır."
+summary_facts:
+  - label: "Kapsam"
+    value: "Seminer, panel, konuşma ve davetli oturumlar"
+  - label: "Odak"
+    value: "Özel eğitim, erişilebilirlik, Braille ve yapay zeka"
+  - label: "Biçim"
+    value: "Konuşma kartları, tema kümeleri ve seçili arşiv"
+highlights:
+  - eyebrow: "Kullanım"
+    title: "Konuşma Yüzeyi"
+    text: "Bu sayfa, konuşma davetleri için görünür bir tema haritası sunabilir ve ileride seçili sunumları arşivleyebilir."
+  - eyebrow: "Arşiv Mantığı"
+    title: "Tek Etkinlikten Kurumsal Arşive"
+    text: "Başlangıçta birkaç öne çıkan konuşma ile başlayıp zaman içinde panel, seminer ve sunum arşivine dönüşebilecek şekilde tasarlanmıştır."
+main_sections:
+  - eyebrow: "Temalar"
+    title: "Konuşma Başlıkları İçin Olası Odaklar"
+    text: "İleride eklenecek konuşmalar aşağıdaki tema kümeleri etrafında gruplanabilir."
+    items:
+      - "Görme yetersizliği ve erişilebilir eğitim"
+      - "Braille okuryazarlığı ve öğretimi"
+      - "Özel eğitimde dijital dönüşüm"
+      - "Yapay zeka ve öğretim tasarımı"
+  - eyebrow: "Biçimler"
+    title: "Sayfada Nasıl Sunulabilir"
+    text: "Her konuşma veya seminer için tekrar eden, taranabilir bir sunum yapısı kurulabilir."
+    items:
+      - "Kısa açıklama ve hedef kitle"
+      - "Etkinlik türü ve tarih bilgisi"
+      - "Sunum bağlantısı veya video kaydı"
+      - "Bağlam notu ve ilgili çalışmalar"
+  - eyebrow: "Seçki"
+    title: "Öne Çıkan ve Tüm Arşiv"
+    text: "Yayınlar sayfasında olduğu gibi, bu bölüm de seçili konuşmalar ve tam arşiv arasında ayrım kurabilecek şekilde geliştirilebilir."
+    items:
+      - "Seçili konuşmalar alanı"
+      - "Tüm etkinlik dizini"
+      - "Tema veya yıl bazlı gruplanma"
+side_cards:
+  - eyebrow: "Durum"
+    title: "İçerik Öncesi Kurulum"
+    text: "Bu bölüm şu anda yalnızca mimari olarak hazırlanmıştır. İçerik hazır olduğunda seçili konuşmalarla hızla doldurulabilir."
+  - eyebrow: "İşlev"
+    title: "Davet ve Arşiv Arasında"
+    text: "Bu sayfa hem konuşma davetleri için yönlendirici bir profil yüzeyi hem de zaman içinde gelişecek bir sunum arşivi olarak düşünülebilir."
+  - eyebrow: "Tasarım Notu"
+    title: "Kısa ve Tarama Dostu"
+    text: "Konuşmalar bölümü, çok uzun metinlerden ziyade kısa ama bağlamlı kartlarla ilerlemelidir."
+---
+Konuşmalar sayfası, akademik profil ile kamusal görünürlük arasında köprü kuran bir alan olarak planlanmıştır. Bu nedenle hem davet mantığını hem de arşiv mantığını taşıyabilecek esnek bir yapı hedeflenmektedir.

@@ -29,7 +29,7 @@ Site iki dillidir:
 |-- content/
 |   |-- _index.tr.md
 |   |-- _index.en.md
-|   |-- bio/
+|   |-- about/
 |   |   |-- _index.tr.md
 |   |   `-- _index.en.md
 |   |-- contact/
@@ -50,7 +50,7 @@ Site iki dillidir:
 |-- layouts/
 |   |-- _default/
 |   |   `-- baseof.html
-|   |-- bio/
+|   |-- about/
 |   |   `-- list.html
 |   |-- contact/
 |   |   `-- list.html
@@ -89,9 +89,9 @@ Sayfa metinlerini güncellemek için:
 - Ana sayfa:
   - `content/_index.tr.md`
   - `content/_index.en.md`
-- Bio:
-  - `content/bio/_index.tr.md`
-  - `content/bio/_index.en.md`
+- About:
+- `content/about/_index.tr.md`
+- `content/about/_index.en.md`
 - Yayınlar sayfası giriş metni:
   - `content/publications/_index.tr.md`
   - `content/publications/_index.en.md`

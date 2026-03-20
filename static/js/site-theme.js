@@ -25,6 +25,15 @@
     document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
       button.setAttribute("data-theme-state", theme);
       button.setAttribute("aria-pressed", String(theme === "light"));
+      const currentThemeLabel = theme === "light"
+        ? button.getAttribute("data-theme-label-light")
+        : button.getAttribute("data-theme-label-dark");
+      const nextActionLabel = theme === "light"
+        ? button.getAttribute("data-theme-action-dark")
+        : button.getAttribute("data-theme-action-light");
+      if (currentThemeLabel && nextActionLabel) {
+        button.setAttribute("aria-label", `${currentThemeLabel}. ${nextActionLabel}.`);
+      }
     });
   }
 

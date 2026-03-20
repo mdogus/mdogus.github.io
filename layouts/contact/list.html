@@ -1,13 +1,6 @@
 {{ define "main" }}
 {{ $isTR := eq .Site.Language.Lang "tr" }}
-<section class="page-hero page-hero--narrow">
-  <div class="page-hero__inner">
-    <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
-    <h1>{{ .Title }}</h1>
-    <p class="page-hero__meta">{{ .Params.meta }}</p>
-    <p class="page-hero__lede">{{ .Params.lede }}</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "page" . "class" "page-hero--narrow") }}
 
 <section class="panel-grid">
   {{ range .Params.highlights }}

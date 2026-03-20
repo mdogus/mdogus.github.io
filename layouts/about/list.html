@@ -1,12 +1,5 @@
 {{ define "main" }}
-<section class="page-hero page-hero--profile">
-  <div class="page-hero__inner">
-    <p class="page-hero__eyebrow">{{ .Params.eyebrow }}</p>
-    <h1>{{ .Title }}</h1>
-    <p class="page-hero__meta">{{ .Params.meta }}</p>
-    <p class="page-hero__lede">{{ .Params.lede }}</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "page" . "class" "page-hero--profile") }}
 
 {{ with .Params.profile_summary }}
 <section class="fact-strip fact-strip--profile">
@@ -19,39 +12,44 @@
 </section>
 {{ end }}
 
-<section class="bio-layout bio-layout--editorial">
-  <div class="bio-layout__main">
+<section class="about-layout about-layout--editorial">
+  <div class="about-layout__main">
     <article class="panel panel--focus prose">
       {{ .Content }}
     </article>
 
-    <div class="panel-grid panel-grid--bio">
+    <div class="panel-grid panel-grid--about">
+      {{ with .Params.interests }}
       <article class="panel panel-card">
-        <p class="panel__eyebrow">{{ .Params.interests_title }}</p>
-        <h2>{{ .Params.interests_title }}</h2>
+        <p class="panel__eyebrow">{{ $.Params.interests_title }}</p>
+        <h2>{{ $.Params.interests_title }}</h2>
         <ul class="pill-list" role="list">
-          {{ range .Params.interests }}
+          {{ range . }}
           <li>{{ . }}</li>
           {{ end }}
         </ul>
       </article>
+      {{ end }}
 
+      {{ with .Params.highlights }}
       <article class="panel panel-card">
-        <p class="panel__eyebrow">{{ .Params.highlights_title }}</p>
-        <h2>{{ .Params.highlights_title }}</h2>
+        <p class="panel__eyebrow">{{ $.Params.highlights_title }}</p>
+        <h2>{{ $.Params.highlights_title }}</h2>
         <ul class="detail-list detail-list--spacious">
-          {{ range .Params.highlights }}
+          {{ range . }}
           <li>{{ . }}</li>
           {{ end }}
         </ul>
       </article>
+      {{ end }}
     </div>
 
+    {{ with .Params.education }}
     <article class="panel panel-card">
-      <p class="panel__eyebrow">{{ .Params.education_title }}</p>
-      <h2>{{ .Params.education_title }}</h2>
+      <p class="panel__eyebrow">{{ $.Params.education_title }}</p>
+      <h2>{{ $.Params.education_title }}</h2>
       <ul class="timeline timeline--elevated" role="list">
-        {{ range .Params.education }}
+        {{ range . }}
         <li>
           <span class="timeline__label">{{ .level }}</span>
           <strong>{{ .institution }}</strong>
@@ -60,9 +58,10 @@
         {{ end }}
       </ul>
     </article>
+    {{ end }}
   </div>
 
-  <aside class="bio-layout__side bio-layout__side--stack">
+  <aside class="about-layout__side about-layout__side--stack">
     <article class="panel panel-card">
       <p class="panel__eyebrow">{{ .Params.focus_eyebrow }}</p>
       <h2>{{ .Params.focus_title }}</h2>
@@ -75,15 +74,11 @@
       <p>{{ .Params.collaboration_text }}</p>
     </article>
 
-    <article class="panel panel-card bio-cv-panel">
-      <p class="panel__eyebrow">{{ .Params.cv_title }}</p>
+    <article class="panel panel-card about-cv-panel">
+      <p class="panel__eyebrow">{{ i18n "cvLabel" }}</p>
       <h2>{{ .Params.cv_title }}</h2>
       <p class="page-note">{{ .Params.cv_note }}</p>
-      {{ if .Params.cv_url }}
-      <a class="button-link" href="{{ .Params.cv_url | relURL }}">{{ .Params.cv_label }}</a>
-      {{ else }}
-      <a class="button-link button-link--disabled" href="#" aria-disabled="true">{{ .Params.cv_label }}</a>
-      {{ end }}
+      <a class="button-link" href="{{ .Params.cv_url }}">{{ .Params.cv_label }}</a>
     </article>
   </aside>
 </section>

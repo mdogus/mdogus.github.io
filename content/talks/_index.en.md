@@ -1,0 +1,55 @@
+---
+title: "Talks"
+eyebrow: "Talks"
+meta: "Seminars, invited talks, panels, and presentation archive"
+lede: "This section is designed to gather talk topics, seminar themes, and future presentation records within a coherent public-facing structure."
+summary_facts:
+  - label: "Scope"
+    value: "Seminars, panels, invited talks, and workshops"
+  - label: "Focus"
+    value: "Special education, accessibility, Braille, and AI"
+  - label: "Format"
+    value: "Talk cards, topic clusters, and a selected archive"
+highlights:
+  - eyebrow: "Use"
+    title: "A Talks Surface"
+    text: "This page can support speaking invitations by making thematic areas visible, while later growing into a selected archive of presentations."
+  - eyebrow: "Archive Logic"
+    title: "From Individual Events to a Stable Archive"
+    text: "It is designed to begin with a few representative talks and later expand into a broader archive of seminars and public sessions."
+main_sections:
+  - eyebrow: "Themes"
+    title: "Possible Talk Clusters"
+    text: "Future talks can be grouped around a small number of recurring academic themes."
+    items:
+      - "Visual impairment and accessible education"
+      - "Braille literacy and instruction"
+      - "Digital transformation in special education"
+      - "AI and instructional design"
+  - eyebrow: "Formats"
+    title: "How This Section Can Present Events"
+    text: "Each talk or seminar can later follow a repeatable structure."
+    items:
+      - "Short abstract and audience"
+      - "Event type and date"
+      - "Slides, video, or reference links"
+      - "Context note and related work"
+  - eyebrow: "Editorial Structure"
+    title: "Featured Talks and Full Archive"
+    text: "Like the publications section, this area can eventually distinguish between selected talks and a full archive."
+    items:
+      - "Featured talks surface"
+      - "Complete event listing"
+      - "Grouping by theme or year"
+side_cards:
+  - eyebrow: "Status"
+    title: "Architecture Before Content"
+    text: "This section is currently prepared as a structural shell so that content can later be added with minimal redesign."
+  - eyebrow: "Role"
+    title: "Between Invitation and Archive"
+    text: "The page can function both as a speaking profile for invitations and as a long-term record of academic and public presentations."
+  - eyebrow: "Design Note"
+    title: "Short, Contextual, Scannable"
+    text: "The talks section should remain concise and card-driven rather than becoming a long prose-heavy page."
+---
+The talks page is planned as a bridge between academic profile and public-facing visibility. For that reason, it should remain flexible enough to support both invitations and archiving.
