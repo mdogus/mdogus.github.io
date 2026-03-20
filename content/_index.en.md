@@ -40,7 +40,7 @@ action_cards:
   #  text: ""
   #  link_label: ""
   #  url: ""
-# selected_work_eyebrow: "Selected Work"
-# selected_work_title: "Featured Publications"
-# selected_work_text: ""
+selected_work_eyebrow: "Selected Work"
+selected_work_title: "Featured Publications"
+selected_work_text: ""
 ---

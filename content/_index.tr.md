@@ -40,7 +40,7 @@ action_cards:
   #  text: ""
   #  link_label: ""
   #  url: ""
-# selected_work_eyebrow: "Seçili Çalışmalar"
-# selected_work_title: "Öne Çıkan Yayınlar"
-# selected_work_text: ""
+selected_work_eyebrow: "Seçili Çalışmalar"
+selected_work_title: "Öne Çıkan Yayınlar"
+selected_work_text: ""
 ---
