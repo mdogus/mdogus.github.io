@@ -24,13 +24,7 @@
       </div>
       {{ end }}
 
-      <div class="spotlight__social" aria-label="{{ i18n "social_links" }}">
-        {{ range .Site.Params.social }}
-        <a class="social-link" href="{{ .url }}" aria-label="{{ .label }}" data-label="{{ .label }}" title="{{ .label }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>
-          {{ partial "icon.html" .icon }}
-        </a>
-        {{ end }}
-      </div>
+      {{ partial "social-links.html" (dict "wrapperClass" "spotlight__social" "linkClass" "social-link") }}
 
       <nav class="spotlight__nav" aria-label="{{ i18n "home_navigation" }}">
         {{ range .Site.Menus.main }}

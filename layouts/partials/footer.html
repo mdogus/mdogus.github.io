@@ -1,20 +1,14 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <div>
+    <div class="site-footer__intro">
       <p class="site-footer__eyebrow">{{ .Site.Params.footer_eyebrow }}</p>
       <p class="site-footer__title">{{ .Site.Title }}</p>
       <p class="site-footer__meta">{{ .Site.Params.footer_meta }}</p>
       <a class="site-footer__mail" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
     </div>
-    <nav class="site-footer__nav" aria-label="{{ i18n "footer_navigation" }}">
-      {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
-    <div class="site-footer__profiles" aria-label="{{ i18n "footer_profiles" }}">
-      {{ range .Site.Params.social }}
-      <a href="{{ .url }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
-      {{ end }}
+    <div class="site-footer__connect">
+      <p class="site-footer__connect-label">{{ i18n "footer_profiles" }}</p>
+      {{ partial "social-links.html" (dict "wrapperClass" "site-footer__social" "linkClass" "social-link social-link--footer") }}
     </div>
   </div>
 </footer>

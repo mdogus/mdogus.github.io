@@ -1,0 +1,9 @@
+{{ $wrapperClass := .wrapperClass | default "social-links" }}
+{{ $linkClass := .linkClass | default "social-link" }}
+<div class="{{ $wrapperClass }}" aria-label="{{ i18n "social_links" }}">
+  {{ range site.Params.social }}
+  <a class="{{ $linkClass }}" href="{{ .url }}" aria-label="{{ .label }}" data-label="{{ .label }}" title="{{ .label }}"{{ if or (hasPrefix .url "http://") (hasPrefix .url "https://") }} target="_blank" rel="noopener"{{ end }}>
+    {{ partial "icon.html" .icon }}
+  </a>
+  {{ end }}
+</div>
