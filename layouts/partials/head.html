@@ -1,7 +1,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if eq .Site.Language.Lang "tr" }}{{ .Site.Params.description_tr }}{{ else }}{{ .Site.Params.description_en }}{{ end }}{{ end }}">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+{{ $description := "" }}
+{{ with .Description }}
+  {{ $description = . }}
+{{ end }}
+{{ if and (eq $description "") .Params.description }}
+  {{ $description = .Params.description }}
+{{ end }}
+{{ if and (eq $description "") .Params.lede }}
+  {{ $description = .Params.lede }}
+{{ end }}
+{{ if and (eq $description "") .Params.meta }}
+  {{ $description = .Params.meta }}
+{{ end }}
+{{ if and (eq $description "") (eq .Site.Language.Lang "tr") }}
+  {{ $description = .Site.Params.description_tr }}
+{{ end }}
+{{ if and (eq $description "") (eq .Site.Language.Lang "en") }}
+  {{ $description = .Site.Params.description_en }}
+{{ end }}
+{{ $pageTitle := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Title) }}
+{{ $canonical := .Permalink }}
+{{ $socialImage := .Site.Params.site_image | absURL }}
+{{ $trPath := partial "lang-path.html" (dict "page" . "lang" "tr") }}
+{{ $enPath := partial "lang-path.html" (dict "page" . "lang" "en") }}
+{{ $trURL := absURL $trPath }}
+{{ $enURL := absURL $enPath }}
+{{ $locale := cond (eq .Site.Language.Lang "tr") "tr_TR" "en_US" }}
+{{ $role := cond (eq .Site.Language.Lang "tr") .Site.Params.role_tr .Site.Params.role_en }}
+{{ $personDescription := cond (eq .Site.Language.Lang "tr") .Site.Params.description_tr .Site.Params.description_en }}
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+{{ if or .Params.noindex (eq .Kind "404") }}
+<meta name="robots" content="noindex, nofollow">
+{{ else }}
+<meta name="robots" content="index, follow">
+{{ end }}
+<title>{{ $pageTitle }}</title>
+<link rel="canonical" href="{{ $canonical }}">
+<link rel="alternate" hreflang="tr-TR" href="{{ $trURL }}">
+<link rel="alternate" hreflang="en-US" href="{{ $enURL }}">
+<link rel="alternate" hreflang="x-default" href="{{ $trURL }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:locale" content="{{ $locale }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:image" content="{{ $socialImage }}">
+<meta property="og:image:alt" content="{{ .Site.Title }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $pageTitle }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $socialImage }}">
 <script>
   (function () {
     try {
@@ -18,3 +69,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <meta name="theme-color" content="#0f1722">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": {{ .Site.Title | jsonify | safeJS }},
+      "inLanguage": "{{ .Site.Language.LanguageCode }}",
+      "description": {{ $personDescription | jsonify | safeJS }}
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ .Site.BaseURL }}#person",
+      "name": {{ .Site.Params.author | jsonify | safeJS }},
+      "url": "{{ .Site.BaseURL }}",
+      "image": "{{ $socialImage }}",
+      "email": "mailto:{{ .Site.Params.email }}",
+      "jobTitle": {{ $role | jsonify | safeJS }},
+      "description": {{ $personDescription | jsonify | safeJS }},
+      "worksFor": {
+        "@type": "Organization",
+        "name": {{ .Site.Params.organization | jsonify | safeJS }}
+      },
+      "sameAs": [
+        {{- range $index, $item := .Site.Params.social -}}
+          {{- if $index }},{{ end -}}
+          {{- $item.url | jsonify | safeJS -}}
+        {{- end -}}
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ $canonical }}#webpage",
+      "url": "{{ $canonical }}",
+      "name": {{ $pageTitle | jsonify | safeJS }},
+      "isPartOf": {
+        "@id": "{{ .Site.BaseURL }}#website"
+      },
+      "about": {
+        "@id": "{{ .Site.BaseURL }}#person"
+      },
+      "inLanguage": "{{ .Site.Language.LanguageCode }}",
+      "description": {{ $description | jsonify | safeJS }}
+    }
+  ]
+}
+</script>

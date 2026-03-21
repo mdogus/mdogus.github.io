@@ -13,6 +13,8 @@ disableKinds = ["taxonomy", "term", "RSS"]
 [params]
   author = "Mustafa Doğuş"
   email = "mustafadogus@anadolu.edu.tr"
+  site_image = "images/hero-logo.png"
+  organization = "Anadolu University"
   role_tr = "Dr. Öğr. Üyesi · Anadolu Üniversitesi Eğitim Fakültesi Özel Eğitim Bölümü"
   role_en = "Assistant Professor · Department of Special Education, Faculty of Education, Anadolu University"
   description_tr = "Özel eğitim, görme yetersizliği, Braille okuryazarlığı, erişilebilirlik ve yardımcı teknolojiler üzerine kişisel akademik site."
