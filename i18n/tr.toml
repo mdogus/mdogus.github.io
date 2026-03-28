@@ -73,5 +73,8 @@ other = "Makale"
 [publication_books_count]
 other = "Kitap"
 
+[publication_citations_count]
+other = "Atıflar"
+
 [publication_other_count]
 other = "Bildiri + tez"

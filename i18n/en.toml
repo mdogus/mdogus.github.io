@@ -73,5 +73,8 @@ other = "Articles"
 [publication_books_count]
 other = "Books"
 
+[publication_citations_count]
+other = "Citations"
+
 [publication_other_count]
 other = "Papers + theses"

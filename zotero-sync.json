@@ -1,6 +1,10 @@
 {
   "libraryType": "users",
   "libraryId": "11529521",
+  "collectionKey": "NTUAUDJA",
+  "includeSubcollections": true,
+  "citationsCollectionName": "Citations",
+  "citationsCollectionKey": "KPGK4UAX",
   "requiresApiKey": true,
   "pageSize": 100
 }

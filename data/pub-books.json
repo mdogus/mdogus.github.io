@@ -1,1 +1,72 @@
-[]
+[
+    {
+        "id":  "http://zotero.org/users/11529521/items/V78XS5N7",
+        "type":  "book",
+        "itemType":  "bookSection",
+        "title":  "Özel Gereksinimi Olan Öğrencilerin Eğitiminde Yardımcı Teknolojiler",
+        "author":  [
+                       {
+                           "given":  "Mustafa",
+                           "family":  "Doğuş"
+                       },
+                       {
+                           "given":  "Cahit",
+                           "family":  "Şahin"
+                       },
+                       {
+                           "given":  "Banu",
+                           "family":  "Altunay"
+                       },
+                       {
+                           "given":  "Gülistan",
+                           "family":  "Yalçın"
+                       },
+                       {
+                           "given":  "Demet",
+                           "family":  "Tiryaki"
+                       }
+                   ],
+        "DOI":  "",
+        "URL":  "",
+        "abstract":  "",
+        "date":  "2025",
+        "year":  2025,
+        "publisher":  "Akademisyen Yayınevi",
+        "issue":  "",
+        "page":  "349-377",
+        "volume":  "",
+        "genre":  "",
+        "institution":  "",
+        "university":  "",
+        "container-title":  "Özel Eğitim"
+    },
+    {
+        "id":  "http://zotero.org/users/11529521/items/JX65MFMA",
+        "type":  "book",
+        "itemType":  "bookSection",
+        "title":  "Görme engellilere teknoloji kullanımının öğretimi",
+        "author":  [
+                       {
+                           "given":  "Mustafa",
+                           "family":  "Doğuş"
+                       },
+                       {
+                           "given":  "Cem",
+                           "family":  "Aslan"
+                       }
+                   ],
+        "DOI":  "",
+        "URL":  "",
+        "abstract":  "",
+        "date":  "2023",
+        "year":  2023,
+        "publisher":  "Vize Akademik",
+        "issue":  "",
+        "page":  "183-204",
+        "volume":  "",
+        "genre":  "",
+        "institution":  "",
+        "university":  "",
+        "container-title":  "Görme engellilerin eğitimi"
+    }
+]

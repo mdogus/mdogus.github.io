@@ -1,1 +1,66 @@
-[]
+[
+    {
+        "id":  "http://zotero.org/users/11529521/items/XMQAMQUM",
+        "type":  "conference",
+        "itemType":  "conferencePaper",
+        "title":  "Experiences of Students with Visual Impairments in Open and Distance Education: Issues, Expectations, and Recommendations",
+        "author":  [
+                       {
+                           "given":  "Halil",
+                           "family":  "Öztürk"
+                       },
+                       {
+                           "given":  "İlyas",
+                           "family":  "Gürses"
+                       },
+                       {
+                           "given":  "Mustafa",
+                           "family":  "Doğuş"
+                       }
+                   ],
+        "DOI":  "10.1109/ICETC66579.2025.11387453",
+        "URL":  "https://ieeexplore.ieee.org/abstract/document/11387453",
+        "abstract":  "This study aims to explore the experiences of visually impaired students enrolled in the Anadolu University Open Education System, identifying the challenges they encounter during open and distance learning processes and proposing solutions to these issues. Conducted using a qualitative case study approach, data were gathered from semi-structured interviews with 20 visually impaired students, document analysis, and researcher diaries. The findings indicate that students face accessibility issues, including incompatibility of digital platforms with screen readers, outdated educational materials, and formatting issues. Additionally, students reported significant challenges in the learning process such as excessive individual study load, insufficient access to specialized support, and limited accessibility to interactive content. While continuous access to course materials and flexible examination options were noted as strengths of the system, weaknesses included complexity of user interfaces and inconsistent accessibility practices. Participants suggested improvements including home-based exam options, increased use of EPUB-formatted content, enhancement of technical infrastructure, and improved student support systems. The study concludes that adopting systematic accessibility testing and user-centered design practices can significantly enhance the inclusivity and accessibility of open and distance learning systems for visually impaired students.",
+        "date":  "2025-09",
+        "year":  2025,
+        "publisher":  "",
+        "issue":  "",
+        "page":  "525-528",
+        "volume":  "",
+        "genre":  "",
+        "institution":  "",
+        "university":  "",
+        "container-title":  "2025 International Conference on Education Technology and Computers (ICETC)",
+        "event-title":  "2025 International Conference on Education Technology and Computers (ICETC)"
+    },
+    {
+        "id":  "http://zotero.org/users/11529521/items/QDBK2V3B",
+        "type":  "conference",
+        "itemType":  "conferencePaper",
+        "title":  "Özel eğitim bölümü lisans öğrencilerinin braille yazıya yönelik tutumları",
+        "author":  [
+                       {
+                           "given":  "Mustafa",
+                           "family":  "Doğuş"
+                       },
+                       {
+                           "given":  "Cem",
+                           "family":  "Aslan"
+                       }
+                   ],
+        "DOI":  "",
+        "URL":  "http://www.ices-uebk.org/downloads/icesozet.pdf",
+        "abstract":  "",
+        "date":  "01.04.2019",
+        "year":  2019,
+        "publisher":  "Ulusal Eğitim Dernekleri Platformu",
+        "issue":  "",
+        "page":  "71-81",
+        "volume":  "",
+        "genre":  "",
+        "institution":  "",
+        "university":  "",
+        "container-title":  "The 28th International Conference on Educational Sciences",
+        "event-title":  "The 28th International Conference on Educational Sciences"
+    }
+]

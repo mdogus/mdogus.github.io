@@ -1,5 +1,5 @@
 {{- $all := slice -}}
-{{- $sources := slice (index site.Data "pub-articles") (index site.Data "pub-books") (index site.Data "pub-conferences") (index site.Data "pub-theses") -}}
+{{- $sources := slice (index site.Data "pub-articles") (index site.Data "pub-books") (index site.Data "pub-conferences") (index site.Data "pub-theses") (index site.Data "pub-citations") -}}
 {{- range $sources -}}
   {{- range . -}}
     {{- $all = $all | append . -}}

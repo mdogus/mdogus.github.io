@@ -4,13 +4,24 @@
   const copy = {
     tr: {
       labels: {
-        article: "Makaleler",
-        book: "Kitaplar",
-        conference: "Bildiriler",
-        thesis: "Tezler",
+        article: "Makale",
+        book: "Kitap",
+        conference: "Bildiri",
+        thesis: "Tez",
+        citation: "Atıflar",
+        journalArticle: "Makale",
+        magazineArticle: "Dergi yazısı",
+        newspaperArticle: "Gazete yazısı",
+        bookSection: "Kitap bölümü",
+        encyclopediaArticle: "Ansiklopedi maddesi",
+        dictionaryEntry: "Sözlük maddesi",
+        conferencePaper: "Bildiri",
+        presentation: "Sunum",
+        speech: "Konuşma",
         publication: "Yayın",
       },
       noFeaturedData: "Öne çıkan yayın verisi bulunamadı.",
+      noEligibleFeaturedData: "Öne çıkan yayınlar için uygun kayıt bulunamadı.",
       noPublicationData: "Yayın kaydı bulunamadı.",
       noFeaturedSelection: "Henüz öne çıkan yayın seçilmedi.",
       listedCount: (count) => `${count} yayın listeleniyor.`,
@@ -24,13 +35,24 @@
     },
     en: {
       labels: {
-        article: "Articles",
-        book: "Books",
-        conference: "Conference Papers",
-        thesis: "Theses",
+        article: "Article",
+        book: "Book",
+        conference: "Conference paper",
+        thesis: "Thesis",
+        citation: "Citations",
+        journalArticle: "Journal article",
+        magazineArticle: "Magazine article",
+        newspaperArticle: "Newspaper article",
+        bookSection: "Book section",
+        encyclopediaArticle: "Encyclopedia entry",
+        dictionaryEntry: "Dictionary entry",
+        conferencePaper: "Conference paper",
+        presentation: "Presentation",
+        speech: "Talk",
         publication: "Publication",
       },
       noFeaturedData: "No featured publication data was found.",
+      noEligibleFeaturedData: "No eligible records were found for featured publications.",
       noPublicationData: "No publication records were found.",
       noFeaturedSelection: "No featured publications have been selected yet.",
       listedCount: (count) => `${count} publications listed.`,
@@ -49,17 +71,63 @@
     "article-journal": "article",
     "article-magazine": "article",
     "article-newspaper": "article",
+    journalArticle: "article",
+    magazineArticle: "article",
+    newspaperArticle: "article",
     book: "book",
     chapter: "book",
+    bookSection: "book",
+    encyclopediaArticle: "book",
+    dictionaryEntry: "book",
     "entry-encyclopedia": "book",
     "entry-dictionary": "book",
     conference: "conference",
     "paper-conference": "conference",
+    conferencePaper: "conference",
     presentation: "conference",
     speech: "conference",
     thesis: "thesis",
     dissertation: "thesis",
+    citation: "citation",
   };
+
+  const displayTypeMap = {
+    "article-journal": "journalArticle",
+    journalArticle: "journalArticle",
+    "article-magazine": "magazineArticle",
+    magazineArticle: "magazineArticle",
+    "article-newspaper": "newspaperArticle",
+    newspaperArticle: "newspaperArticle",
+    book: "book",
+    chapter: "bookSection",
+    bookSection: "bookSection",
+    encyclopediaArticle: "encyclopediaArticle",
+    "entry-encyclopedia": "encyclopediaArticle",
+    dictionaryEntry: "dictionaryEntry",
+    "entry-dictionary": "dictionaryEntry",
+    conferencePaper: "conferencePaper",
+    "paper-conference": "conferencePaper",
+    presentation: "presentation",
+    speech: "speech",
+    thesis: "thesis",
+    dissertation: "thesis",
+    citation: "citation",
+  };
+
+  const preferredCategoryOrder = [
+    "journalArticle",
+    "magazineArticle",
+    "newspaperArticle",
+    "book",
+    "bookSection",
+    "encyclopediaArticle",
+    "dictionaryEntry",
+    "conferencePaper",
+    "presentation",
+    "speech",
+    "thesis",
+    "citation",
+  ];
 
   const abstractPreviewLength = 240;
 
@@ -129,6 +197,7 @@
 
   function normalizePublication(item) {
     const type = normalizeType(item.type || item.itemType);
+    const displayType = normalizeDisplayType(item.itemType || item.type, type);
 
     return {
       id: item.id || buildPublicationId(item.title, type, extractYear(item)),
@@ -137,6 +206,7 @@
       year: extractYear(item),
       venue: normalizeVenue(item, type),
       type,
+      displayType,
       doi: normalizeDoi(item.doi || item.DOI),
       url: item.url || item.URL || "",
       pdf: item.pdf || "",
@@ -147,6 +217,14 @@
 
   function normalizeType(rawType) {
     return typeMap[rawType] || "article";
+  }
+
+  function normalizeDisplayType(rawType, fallbackType) {
+    if (fallbackType === "citation") {
+      return "citation";
+    }
+
+    return displayTypeMap[rawType] || fallbackType;
   }
 
   function normalizeAuthors(authors) {
@@ -242,6 +320,25 @@
     return left.title.localeCompare(right.title, locale);
   }
 
+  function compareDisplayTypes(left, right) {
+    const leftIndex = preferredCategoryOrder.indexOf(left);
+    const rightIndex = preferredCategoryOrder.indexOf(right);
+
+    if (leftIndex !== -1 && rightIndex !== -1) {
+      return leftIndex - rightIndex;
+    }
+
+    if (leftIndex !== -1) {
+      return -1;
+    }
+
+    if (rightIndex !== -1) {
+      return 1;
+    }
+
+    return String(copy.labels[left] || left).localeCompare(String(copy.labels[right] || right), locale);
+  }
+
   function initFeaturedPublications(publications, featuredIds) {
     const container = document.getElementById("featured-publications");
 
@@ -250,11 +347,13 @@
     }
 
     const featuredItems = publications
+      .filter((item) => item.type !== "citation")
       .filter((item) => featuredIds.has(String(item.id)) || item.featured)
       .slice(0, 3);
 
     if (!featuredItems.length) {
-      renderEmptyState(container, copy.noFeaturedSelection);
+      const message = featuredIds.size ? copy.noEligibleFeaturedData : copy.noFeaturedSelection;
+      renderEmptyState(container, message);
       return;
     }
 
@@ -274,6 +373,7 @@
       return;
     }
 
+    populateCategoryFilter(categoryFilter, publications);
     populateYearFilter(yearFilter, publications);
 
     const render = () => {
@@ -281,7 +381,7 @@
       const selectedYear = yearFilter.value;
 
       const filtered = publications.filter((item) => {
-        const categoryMatch = selectedCategory === "all" || item.type === selectedCategory;
+        const categoryMatch = selectedCategory === "all" || item.displayType === selectedCategory;
         const yearMatch = selectedYear === "all" || String(item.year) === selectedYear;
         return categoryMatch && yearMatch;
       });
@@ -293,6 +393,19 @@
     categoryFilter.addEventListener("change", render);
     yearFilter.addEventListener("change", render);
     render();
+  }
+
+  function populateCategoryFilter(categoryFilter, publications) {
+    const categories = [...new Set(publications.map((item) => item.displayType))]
+      .filter(Boolean)
+      .sort(compareDisplayTypes);
+
+    categories.forEach((category) => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = copy.labels[category] || copy.labels.publication;
+      categoryFilter.append(option);
+    });
   }
 
   function populateYearFilter(yearFilter, publications) {
@@ -316,13 +429,13 @@
       return;
     }
 
-    const allTypes = Object.keys(copy.labels).filter((item) => item !== "publication");
-    const categories = selectedCategory === "all"
-      ? allTypes.filter((type) => publications.some((item) => item.type === type))
-      : [selectedCategory];
+    const allTypes = [...new Set(publications.map((item) => item.displayType))]
+      .filter(Boolean)
+      .sort(compareDisplayTypes);
+    const categories = selectedCategory === "all" ? allTypes : [selectedCategory];
 
     categories.forEach((type) => {
-      const items = publications.filter((item) => item.type === type);
+      const items = publications.filter((item) => item.displayType === type);
 
       if (!items.length) {
         return;
@@ -332,7 +445,7 @@
       section.className = "publication-section";
 
       const heading = document.createElement("h2");
-      heading.textContent = `${copy.labels[type]} (${items.length})`;
+      heading.textContent = `${copy.labels[type] || copy.labels.publication} (${items.length})`;
       section.append(heading);
 
       const years = [...new Set(items.map((item) => item.year))].sort((left, right) => right - left);
@@ -368,7 +481,7 @@
       meta.className = "publication-meta";
 
       if (includeTypeBadge) {
-        meta.append(buildBadge(copy.labels[item.type] || copy.labels.publication));
+        meta.append(buildBadge(copy.labels[item.displayType] || copy.labels[item.type] || copy.labels.publication));
       }
 
       meta.append(document.createTextNode(String(item.year)));

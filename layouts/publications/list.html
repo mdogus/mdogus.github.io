@@ -1,9 +1,10 @@
 {{ define "main" }}
-{{ $articles := index site.Data "pub-articles" }}
-{{ $books := index site.Data "pub-books" }}
-{{ $conferences := index site.Data "pub-conferences" }}
-{{ $theses := index site.Data "pub-theses" }}
-{{ $featured := index site.Data "featured-publications" }}
+{{ $articles := (index site.Data "pub-articles") | default (slice) }}
+{{ $books := (index site.Data "pub-books") | default (slice) }}
+{{ $conferences := (index site.Data "pub-conferences") | default (slice) }}
+{{ $theses := (index site.Data "pub-theses") | default (slice) }}
+{{ $citations := (index site.Data "pub-citations") | default (slice) }}
+{{ $featured := (index site.Data "featured-publications") | default (slice) }}
 {{ $total := add (add (len $articles) (len $books)) (add (len $conferences) (len $theses)) }}
 
 {{ partial "page-hero.html" (dict "page" .) }}
@@ -24,6 +25,10 @@
   <article class="fact-card">
     <p class="fact-card__label">{{ i18n "publication_books_count" }}</p>
     <p class="fact-card__value">{{ len $books }}</p>
+  </article>
+  <article class="fact-card">
+    <p class="fact-card__label">{{ i18n "publication_citations_count" }}</p>
+    <p class="fact-card__value">{{ len $citations }}</p>
   </article>
   <article class="fact-card">
     <p class="fact-card__label">{{ i18n "publication_other_count" }}</p>
@@ -63,10 +68,6 @@
         <label for="category-filter">{{ i18n "category_label" }}</label>
         <select id="category-filter" name="category">
           <option value="all">{{ i18n "all_categories" }}</option>
-          <option value="article">{{ if eq .Site.Language.Lang "tr" }}Makaleler{{ else }}Articles{{ end }}</option>
-          <option value="book">{{ if eq .Site.Language.Lang "tr" }}Kitaplar{{ else }}Books{{ end }}</option>
-          <option value="conference">{{ if eq .Site.Language.Lang "tr" }}Bildiriler{{ else }}Conference papers{{ end }}</option>
-          <option value="thesis">{{ if eq .Site.Language.Lang "tr" }}Tezler{{ else }}Theses{{ end }}</option>
         </select>
       </div>
       <div class="field-group">
