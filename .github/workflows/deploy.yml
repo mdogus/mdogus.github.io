@@ -21,6 +21,8 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -34,11 +36,14 @@ jobs:
           hugo-version: "0.158.0"
 
       - name: Sync publications from Zotero
-        if: ${{ secrets.ZOTERO_API_KEY != '' }}
         shell: pwsh
-        env:
-          ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
-        run: ./scripts/sync-zotero-publications.ps1 -ApiKey "$env:ZOTERO_API_KEY"
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:ZOTERO_API_KEY)) {
+            Write-Host "ZOTERO_API_KEY is not set; skipping Zotero sync."
+            exit 0
+          }
+
+          ./scripts/sync-zotero-publications.ps1 -ApiKey "$env:ZOTERO_API_KEY"
 
       - name: Build site
         run: hugo --minify
